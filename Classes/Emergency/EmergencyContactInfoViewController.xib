@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmergencyContactInfoViewController">
+            <connections>
+                <outlet property="linkButton" destination="c6U-M8-cbP" id="pan-ra-knd"/>
+                <outlet property="messageContentLabel" destination="dGk-VU-zOK" id="MmV-iK-oj8"/>
+                <outlet property="titleLabel" destination="qZZ-iw-K0p" id="40N-ic-7SG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" translatesAutoresizingMaskIntoConstraints="NO" id="6nn-Qx-IWR">
+                    <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LD5-AN-BVK">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1126.5"/>
+                            <subviews>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZZ-iw-K0p">
+                                    <rect key="frame" x="36" y="20" width="342" height="43.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <string key="text">Använda Nödsamtal SOS 
+på iPhone</string>
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" verticalCompressionResistancePriority="759" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGk-VU-zOK">
+                                    <rect key="frame" x="36" y="83.5" width="342" height="269"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">Du kan använda iPhone till att snabbt ringa 
+efter hjälp i nödsituationer. Med Nödsamtal SOS
+kan du snabbt och enkelt ringa efter hjälp och 
+</string>
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="meddela dina nödkontakter.  ">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Phone 8 och senare:">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <font key="NSOriginalFont" metaFont="systemBold" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content"> Håll in sidoknappen och en av volymknapparna. Fortsätt att hålla in knapparna när reglaget för Nödsamtal SOS visas och tills iPhone spelar upp ett varningsljud och startar en nedräkning.  </string>
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Andra modeller: ">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <font key="NSOriginalFont" metaFont="systemBold" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Klicka fem gånger på sidoknappen eller vilo-/väckningsknappen (beroende på modell) och dra sedan reglaget Nödsamtal SOS.">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c6U-M8-cbP">
+                                    <rect key="frame" x="36" y="372.5" width="342" height="34"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Read more">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.41568627450000001" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_alarm_info" translatesAutoresizingMaskIntoConstraints="NO" id="4Nz-1f-1nv">
+                                    <rect key="frame" x="36" y="442.5" width="342" height="684"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="4Nz-1f-1nv" secondAttribute="height" multiplier="1:2" id="SW2-Rj-OM1"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="dGk-VU-zOK" firstAttribute="leading" secondItem="LD5-AN-BVK" secondAttribute="leading" constant="36" id="0tP-ah-7T9"/>
+                                <constraint firstAttribute="trailing" secondItem="4Nz-1f-1nv" secondAttribute="trailing" constant="36" id="3kP-f1-Bhp"/>
+                                <constraint firstItem="c6U-M8-cbP" firstAttribute="leading" secondItem="LD5-AN-BVK" secondAttribute="leading" constant="36" id="8cS-Ir-a1P"/>
+                                <constraint firstAttribute="trailing" secondItem="c6U-M8-cbP" secondAttribute="trailing" constant="36" id="F8v-6d-xHM"/>
+                                <constraint firstItem="4Nz-1f-1nv" firstAttribute="top" secondItem="c6U-M8-cbP" secondAttribute="bottom" constant="36" id="Gxk-bz-gTZ"/>
+                                <constraint firstItem="dGk-VU-zOK" firstAttribute="top" secondItem="qZZ-iw-K0p" secondAttribute="bottom" constant="20" id="NSR-o4-B3c"/>
+                                <constraint firstAttribute="bottom" secondItem="4Nz-1f-1nv" secondAttribute="bottom" id="T9R-Oc-NCu"/>
+                                <constraint firstItem="qZZ-iw-K0p" firstAttribute="leading" secondItem="LD5-AN-BVK" secondAttribute="leading" constant="36" id="bLX-HX-t4r"/>
+                                <constraint firstItem="4Nz-1f-1nv" firstAttribute="leading" secondItem="LD5-AN-BVK" secondAttribute="leading" constant="36" id="g0T-Ov-w1o"/>
+                                <constraint firstItem="c6U-M8-cbP" firstAttribute="top" secondItem="dGk-VU-zOK" secondAttribute="bottom" constant="20" id="jXw-nu-J4j"/>
+                                <constraint firstAttribute="trailing" secondItem="dGk-VU-zOK" secondAttribute="trailing" constant="36" id="ldf-3n-6Dk"/>
+                                <constraint firstAttribute="trailing" secondItem="qZZ-iw-K0p" secondAttribute="trailing" constant="36" id="oZQ-94-eP4"/>
+                                <constraint firstItem="qZZ-iw-K0p" firstAttribute="top" secondItem="LD5-AN-BVK" secondAttribute="top" constant="20" id="rKe-wt-GmT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LD5-AN-BVK" firstAttribute="width" secondItem="6nn-Qx-IWR" secondAttribute="width" id="HnN-W4-reJ"/>
+                        <constraint firstItem="LD5-AN-BVK" firstAttribute="leading" secondItem="6nn-Qx-IWR" secondAttribute="leading" id="LwK-hU-hun"/>
+                        <constraint firstAttribute="bottom" secondItem="LD5-AN-BVK" secondAttribute="bottom" id="MBJ-YV-peG"/>
+                        <constraint firstAttribute="trailing" secondItem="LD5-AN-BVK" secondAttribute="trailing" id="ULl-0a-YYe"/>
+                        <constraint firstItem="LD5-AN-BVK" firstAttribute="top" secondItem="6nn-Qx-IWR" secondAttribute="top" id="wm7-Tv-jpm"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="E0Y-mX-8eb"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="cIN-gM-F5e"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6nn-Qx-IWR" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="PuD-DI-oog"/>
+                <constraint firstAttribute="bottom" secondItem="6nn-Qx-IWR" secondAttribute="bottom" id="UAk-s3-wFM"/>
+                <constraint firstItem="6nn-Qx-IWR" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="izH-CH-kkB"/>
+                <constraint firstItem="6nn-Qx-IWR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="w70-OU-Lzm"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="create_alarm_info" width="279.5" height="559.5"/>
+    </resources>
+</document>

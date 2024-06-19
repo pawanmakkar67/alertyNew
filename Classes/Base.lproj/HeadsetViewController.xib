@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeadsetViewController">
+            <connections>
+                <outlet property="tableView" destination="9fH-rN-yZT" id="4gE-xu-JhG"/>
+                <outlet property="testButton" destination="tcT-G2-fvl" id="0p5-Bm-n0y"/>
+                <outlet property="view" destination="4" id="12"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fH-rN-yZT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="351"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IkW-ua-y9K"/>
+                        <outlet property="delegate" destination="-1" id="6fa-0m-y1S"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcT-G2-fvl">
+                    <rect key="frame" x="116.5" y="371" width="87" height="50"/>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.31764705882352939" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UBb-qs-2rt"/>
+                        <constraint firstAttribute="width" constant="87" id="a2F-W4-uNz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                    <state key="normal" title="Test">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="testHeadset:" destination="-1" eventType="touchUpInside" id="jFz-Me-V6Z"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Art-CY-Yzg"/>
+            <color key="backgroundColor" name="color_background"/>
+            <constraints>
+                <constraint firstItem="tcT-G2-fvl" firstAttribute="top" secondItem="9fH-rN-yZT" secondAttribute="bottom" constant="20" id="7Sa-uc-Mjm"/>
+                <constraint firstAttribute="trailing" secondItem="9fH-rN-yZT" secondAttribute="trailing" id="TXr-t8-kYk"/>
+                <constraint firstItem="9fH-rN-yZT" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="e8N-0d-vXi"/>
+                <constraint firstItem="tcT-G2-fvl" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="mQl-QA-AsO"/>
+                <constraint firstItem="9fH-rN-yZT" firstAttribute="top" secondItem="4" secondAttribute="top" id="mz6-Mc-kB0"/>
+                <constraint firstItem="tcT-G2-fvl" firstAttribute="bottom" secondItem="Art-CY-Yzg" secondAttribute="bottom" constant="-10" id="q7Q-C4-KFP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133" y="155"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="color_background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,19 @@
+/* 
+  Target.strings
+  Alerty
+
+  Created by Viking on 2017. 07. 05..
+
+*/
+
+"Alerty" = "Säkappen";
+
+"Alerty Emergency call" = "Säkappen alarm";
+"I am using Alerty!" = "Online";
+"Not yet a user of Alerty" = "Not yet a user of Säkappen";
+
+"Alerty feedback" = "Säkappen feedback";
+
+"WELCOME_WHITELABEL" = "Sign in with your received user-ID and enter a personal authorization code. The code is used to cancel alarms, turn off features and much more.\n\
+Please remember your authorization code!\n \
+If you do not have a user-ID please contact the responsible person.";

@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "66:66:66"; ObjectID = "7Nn-v1-h5m"; */
+"7Nn-v1-h5m.text" = "66:66:66";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "Bbe-YZ-C4e"; */
+"Bbe-YZ-C4e.normalTitle" = "Start";
+
+/* Class = "UIButton"; selectedTitle = "Activate alarm"; ObjectID = "Bbe-YZ-C4e"; */
+"Bbe-YZ-C4e.selectedTitle" = "Activate alarm";
+
+/* Class = "UILabel"; text = "Describe what you will do and where you will be while the timer is running."; ObjectID = "Hur-Hf-DyN"; */
+"Hur-Hf-DyN.text" = "Describe what you will do and where you will be while the timer is running.";
+
+/* Class = "UITextField"; placeholder = "ex. Cleaning the basement"; ObjectID = "V1h-aL-wn8"; */
+"V1h-aL-wn8.placeholder" = "ex. Cleaning the basement";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "ccC-7d-LCP"; */
+"ccC-7d-LCP.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "When the timer ends an alarm is activated. A reminder is displayed 30 sec before the timer ends."; ObjectID = "dWW-PM-har"; */
+"dWW-PM-har.text" = "When the timer ends an alarm is activated. A reminder is displayed 30 sec before the timer ends.";

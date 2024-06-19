@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "ios12-iphone-x-power-off-screen-sos.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ios12-iphone-x-power-off-screen-sos@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "ios12-iphone-x-power-off-screen-sos@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

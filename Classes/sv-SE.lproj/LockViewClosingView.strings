@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Please enter authorization code to cancel the alert!"; ObjectID = "3"; */
+"3.text" = "Please enter authorization code to cancel the alert!";
+
+/* Class = "UILabel"; text = "Wrong authorization code"; ObjectID = "63"; */
+"63.text" = "Wrong authorization code";
+
+/* Class = "UILabel"; text = "try again"; ObjectID = "65"; */
+"65.text" = "try again";

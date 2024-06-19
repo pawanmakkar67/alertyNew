@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Press and hold the screen for 3 seconds to activate an alarm"; ObjectID = "211"; */
+"211.text" = "Tryck och håll på skärmen i 3 sekunder för att aktivera ett larm";
+
+/* Class = "UILabel"; text = "Can not connect to server. Retrying"; ObjectID = "220"; */
+"220.text" = "Kan inte ansluta till internet. Försöker igen";
+
+/* Class = "UIButton"; accessibilityLabel = "Press and hold the screen for 3 seconds to activate an alarm."; ObjectID = "hr8-03-E1P"; */
+"hr8-03-E1P.accessibilityLabel" = "Tryck och håll på skärmen i 3 sekunder för att aktivera ett larm.";

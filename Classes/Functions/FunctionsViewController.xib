@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FunctionsViewController">
+            <connections>
+                <outlet property="followMeBottomConstraint" destination="lK9-sY-Oq3" id="LSf-xw-tOf"/>
+                <outlet property="followMeButton" destination="GE7-TY-l5D" id="dHu-5t-ICP"/>
+                <outlet property="manDownBottomConstraint" destination="WZY-ST-wDQ" id="JRt-ZG-FpX"/>
+                <outlet property="manDownButton" destination="VLn-Tc-nWO" id="kZ3-Nw-p2y"/>
+                <outlet property="screenLockBottomConstraint" destination="ayR-wo-Wti" id="iZE-KP-4Bf"/>
+                <outlet property="timerAlarmBottomConstraint" destination="0iC-ev-o7u" id="ePa-c9-gWW"/>
+                <outlet property="timerButton" destination="lf0-wE-kiw" id="44A-0z-1ZZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8A-zl-4HC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNg-HB-f6C">
+                    <rect key="frame" x="0.0" y="151.5" width="320" height="328.5"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE7-TY-l5D">
+                    <rect key="frame" x="0.0" y="151" width="159.5" height="151"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Follow me"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                    <state key="normal" image="functions_followme">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="functions_followme_active"/>
+                    <connections>
+                        <action selector="followMePressed:" destination="-1" eventType="touchUpInside" id="9qX-K8-Zef"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnt-uT-m5d">
+                    <rect key="frame" x="35.5" y="258" width="89" height="24"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLn-Tc-nWO">
+                    <rect key="frame" x="160.5" y="151" width="159.5" height="151"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Man down"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                    <state key="normal" image="functions_mandown">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="functions_mandown_active"/>
+                    <connections>
+                        <action selector="manDownPressed:" destination="-1" eventType="touchUpInside" id="dor-0f-3KA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man down" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayB-XR-b7i">
+                    <rect key="frame" x="195" y="258" width="92" height="24"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-wE-kiw">
+                    <rect key="frame" x="0.0" y="303" width="159.5" height="151"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Timer alarm"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                    <state key="normal" image="functions_timer">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="functions_timer_active"/>
+                    <connections>
+                        <action selector="timerAlarmPressed:" destination="-1" eventType="touchUpInside" id="mtn-fd-YHf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-iV-qmW">
+                    <rect key="frame" x="28.5" y="410" width="104" height="24"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gal-lE-ymD">
+                    <rect key="frame" x="160.5" y="303" width="159.5" height="151"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Screen lock"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                    <state key="normal" image="functions_screenlock">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="lockScreenPressed:" destination="-1" eventType="touchUpInside" id="2Gg-Ed-USy"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen lock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9P-tU-n9H">
+                    <rect key="frame" x="189" y="410" width="103" height="24"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.2540400256849315" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yW5-iV-qmW" firstAttribute="bottom" secondItem="lf0-wE-kiw" secondAttribute="bottom" constant="-20" id="0iC-ev-o7u"/>
+                <constraint firstItem="lf0-wE-kiw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3h8-P2-qAR"/>
+                <constraint firstItem="gal-lE-ymD" firstAttribute="top" secondItem="VLn-Tc-nWO" secondAttribute="bottom" constant="1" id="BXM-NQ-Ln4"/>
+                <constraint firstAttribute="trailing" secondItem="VLn-Tc-nWO" secondAttribute="trailing" id="ONU-ty-bXv"/>
+                <constraint firstAttribute="trailing" secondItem="k8A-zl-4HC" secondAttribute="trailing" id="PbN-59-GZL"/>
+                <constraint firstItem="gal-lE-ymD" firstAttribute="height" secondItem="VLn-Tc-nWO" secondAttribute="height" id="PiZ-Km-cFf"/>
+                <constraint firstAttribute="bottom" secondItem="mNg-HB-f6C" secondAttribute="bottom" id="Qdf-bX-Uhb"/>
+                <constraint firstItem="gal-lE-ymD" firstAttribute="leading" secondItem="lf0-wE-kiw" secondAttribute="trailing" constant="1" id="RSC-Dm-hbC"/>
+                <constraint firstItem="gal-lE-ymD" firstAttribute="width" secondItem="lf0-wE-kiw" secondAttribute="width" id="S8N-pp-Zex"/>
+                <constraint firstItem="VLn-Tc-nWO" firstAttribute="top" secondItem="k8A-zl-4HC" secondAttribute="bottom" id="TDM-bI-uaU"/>
+                <constraint firstItem="yW5-iV-qmW" firstAttribute="centerX" secondItem="lf0-wE-kiw" secondAttribute="centerX" id="V8k-fw-IAf"/>
+                <constraint firstItem="ayB-XR-b7i" firstAttribute="bottom" secondItem="VLn-Tc-nWO" secondAttribute="bottom" constant="-20" id="WZY-ST-wDQ"/>
+                <constraint firstAttribute="bottom" secondItem="lf0-wE-kiw" secondAttribute="bottom" constant="26" id="Zqe-zy-KK8"/>
+                <constraint firstItem="j9P-tU-n9H" firstAttribute="bottom" secondItem="gal-lE-ymD" secondAttribute="bottom" constant="-20" id="ayR-wo-Wti"/>
+                <constraint firstItem="mNg-HB-f6C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bYL-za-lgY"/>
+                <constraint firstItem="VLn-Tc-nWO" firstAttribute="leading" secondItem="GE7-TY-l5D" secondAttribute="trailing" constant="1" id="beX-gT-hSG"/>
+                <constraint firstItem="ayB-XR-b7i" firstAttribute="centerX" secondItem="VLn-Tc-nWO" secondAttribute="centerX" id="eDh-Zu-A7m"/>
+                <constraint firstItem="GE7-TY-l5D" firstAttribute="top" secondItem="k8A-zl-4HC" secondAttribute="bottom" id="eTD-4e-IZh"/>
+                <constraint firstItem="mNg-HB-f6C" firstAttribute="top" secondItem="k8A-zl-4HC" secondAttribute="bottom" constant="0.5" id="fC1-ie-tXf"/>
+                <constraint firstItem="j9P-tU-n9H" firstAttribute="centerX" secondItem="gal-lE-ymD" secondAttribute="centerX" id="jfg-5C-0aT"/>
+                <constraint firstItem="k8A-zl-4HC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kyi-x6-g7k"/>
+                <constraint firstItem="Rnt-uT-m5d" firstAttribute="bottom" secondItem="GE7-TY-l5D" secondAttribute="bottom" constant="-20" id="lK9-sY-Oq3"/>
+                <constraint firstItem="Rnt-uT-m5d" firstAttribute="centerX" secondItem="GE7-TY-l5D" secondAttribute="centerX" id="lvD-af-Chq"/>
+                <constraint firstItem="lf0-wE-kiw" firstAttribute="height" secondItem="GE7-TY-l5D" secondAttribute="height" id="qCP-UV-vMh"/>
+                <constraint firstItem="k8A-zl-4HC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qyr-wb-477"/>
+                <constraint firstItem="GE7-TY-l5D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sn1-Xx-I3O"/>
+                <constraint firstItem="lf0-wE-kiw" firstAttribute="top" secondItem="GE7-TY-l5D" secondAttribute="bottom" constant="1" id="suZ-7S-dYa"/>
+                <constraint firstAttribute="trailing" secondItem="mNg-HB-f6C" secondAttribute="trailing" id="tRS-wr-r1q"/>
+                <constraint firstAttribute="bottom" secondItem="gal-lE-ymD" secondAttribute="bottom" constant="26" id="u3a-Nz-eDb"/>
+                <constraint firstItem="VLn-Tc-nWO" firstAttribute="width" secondItem="GE7-TY-l5D" secondAttribute="width" id="uU3-lf-lww"/>
+                <constraint firstItem="GE7-TY-l5D" firstAttribute="height" secondItem="k8A-zl-4HC" secondAttribute="height" id="wwf-Ox-PSR"/>
+                <constraint firstAttribute="trailing" secondItem="gal-lE-ymD" secondAttribute="trailing" id="x5D-pd-KBa"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="101.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="functions_followme" width="100" height="100"/>
+        <image name="functions_followme_active" width="100" height="100"/>
+        <image name="functions_mandown" width="100" height="100"/>
+        <image name="functions_mandown_active" width="100" height="100"/>
+        <image name="functions_screenlock" width="100" height="100"/>
+        <image name="functions_timer" width="100" height="100"/>
+        <image name="functions_timer_active" width="100" height="100"/>
+    </resources>
+</document>

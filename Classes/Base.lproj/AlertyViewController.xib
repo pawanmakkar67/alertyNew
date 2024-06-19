@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertyViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="111" id="112"/>
+                <outlet property="bannerTableView" destination="Sdd-Kw-iZZ" id="zJf-UY-Pek"/>
+                <outlet property="buttonView" destination="100" id="Ncy-d6-Yfj"/>
+                <outlet property="figureTextDistanceConstraint" destination="u7h-ZW-27V" id="a3D-HO-2XU"/>
+                <outlet property="mainView" destination="qTM-Hk-uFv" id="IMi-bx-aEa"/>
+                <outlet property="networkErrorLabel" destination="220" id="221"/>
+                <outlet property="networkErrorView" destination="219" id="222"/>
+                <outlet property="pressedViewHeight" destination="dOY-5C-TeC" id="2yR-Aj-Puq"/>
+                <outlet property="redButton" destination="hr8-03-E1P" id="E9o-dz-FdZ"/>
+                <outlet property="redLayer" destination="Bsd-f2-Yzw" id="pNx-Zd-EZn"/>
+                <outlet property="soundIcon" destination="jIH-81-P3j" id="xeS-u2-U7H"/>
+                <outlet property="view" destination="6" id="7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="219">
+                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Can not connect to server. Retrying" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="220">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <rect key="contentStretch" x="0.0" y="0.49999999999999994" width="1" height="1"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="100">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bsd-f2-Yzw">
+                            <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                            <color key="backgroundColor" red="0.78431372549019607" green="0.34901960784313724" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="dOY-5C-TeC"/>
+                            </constraints>
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTM-Hk-uFv">
+                            <rect key="frame" x="0.0" y="137" width="375" height="326.5"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_ic" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-qg-yUX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" none="YES"/>
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press and hold the screen for 3 seconds to activate an alarm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="211">
+                                    <rect key="frame" x="32" y="278.5" width="311" height="48"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Hff-qg-yUX" firstAttribute="top" secondItem="qTM-Hk-uFv" secondAttribute="top" id="0CY-do-8M9"/>
+                                <constraint firstItem="Hff-qg-yUX" firstAttribute="leading" secondItem="qTM-Hk-uFv" secondAttribute="leading" id="LlS-2n-1I2"/>
+                                <constraint firstItem="211" firstAttribute="leading" secondItem="qTM-Hk-uFv" secondAttribute="leading" constant="32" id="kMh-v2-PVP"/>
+                                <constraint firstAttribute="trailing" secondItem="211" secondAttribute="trailing" constant="32" id="mhl-et-VNE"/>
+                                <constraint firstItem="211" firstAttribute="top" secondItem="Hff-qg-yUX" secondAttribute="bottom" constant="50" id="u7h-ZW-27V"/>
+                                <constraint firstAttribute="bottom" secondItem="211" secondAttribute="bottom" id="x9g-Pv-9Qy"/>
+                                <constraint firstAttribute="trailing" secondItem="Hff-qg-yUX" secondAttribute="trailing" id="zAF-AE-qGy"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-03-E1P">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                            <accessibility key="accessibilityConfiguration" label="Press and hold the screen for 3 seconds to activate an alarm.">
+                                <accessibilityTraits key="traits" allowsDirectInteraction="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <connections>
+                                <action selector="redButtonReleased:" destination="-1" eventType="touchUpInside" id="9zl-r4-7Rw"/>
+                                <action selector="redButtonTouched:" destination="-1" eventType="touchDown" id="mJ5-3T-PVq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="hr8-03-E1P" secondAttribute="trailing" id="65z-dc-8zm"/>
+                        <constraint firstItem="hr8-03-E1P" firstAttribute="top" secondItem="100" secondAttribute="top" id="SK4-Ag-seT"/>
+                        <constraint firstAttribute="trailing" secondItem="qTM-Hk-uFv" secondAttribute="trailing" id="YLB-kN-rO1"/>
+                        <constraint firstAttribute="trailing" secondItem="Bsd-f2-Yzw" secondAttribute="trailing" id="YhB-Op-JnJ"/>
+                        <constraint firstItem="qTM-Hk-uFv" firstAttribute="centerY" secondItem="100" secondAttribute="centerY" multiplier="0.9" id="ZWf-fv-bLp"/>
+                        <constraint firstAttribute="bottom" secondItem="Bsd-f2-Yzw" secondAttribute="bottom" id="fTU-aZ-R4b"/>
+                        <constraint firstItem="Bsd-f2-Yzw" firstAttribute="leading" secondItem="100" secondAttribute="leading" id="hui-Ql-kmA"/>
+                        <constraint firstItem="qTM-Hk-uFv" firstAttribute="leading" secondItem="100" secondAttribute="leading" id="lbP-w7-fKa"/>
+                        <constraint firstAttribute="bottom" secondItem="hr8-03-E1P" secondAttribute="bottom" constant="26" id="nul-re-UHo"/>
+                        <constraint firstItem="hr8-03-E1P" firstAttribute="leading" secondItem="100" secondAttribute="leading" id="sSP-6c-VTF"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_off_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jIH-81-P3j">
+                    <rect key="frame" x="5" y="600" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="SgV-VN-pTo"/>
+                        <constraint firstAttribute="width" constant="35" id="v0i-cg-3mA"/>
+                    </constraints>
+                </imageView>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="900" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="44" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sdd-Kw-iZZ" customClass="BannerTableView" customModule="Alerty" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="111">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="htb-fH-QzY"/>
+            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="100" secondAttribute="bottom" id="4lh-EL-1em"/>
+                <constraint firstItem="Sdd-Kw-iZZ" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="7ms-iD-DJg"/>
+                <constraint firstItem="htb-fH-QzY" firstAttribute="trailing" secondItem="Sdd-Kw-iZZ" secondAttribute="trailing" id="AD1-wK-Taj"/>
+                <constraint firstItem="htb-fH-QzY" firstAttribute="bottom" secondItem="jIH-81-P3j" secondAttribute="bottom" constant="32" id="BU0-XA-swc"/>
+                <constraint firstItem="100" firstAttribute="top" secondItem="6" secondAttribute="top" id="DMN-cY-EJG"/>
+                <constraint firstItem="100" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="Dgg-9o-qEv"/>
+                <constraint firstItem="Sdd-Kw-iZZ" firstAttribute="top" secondItem="htb-fH-QzY" secondAttribute="top" id="N9U-I0-Xyf"/>
+                <constraint firstAttribute="trailing" secondItem="100" secondAttribute="trailing" id="aW6-xN-e7G"/>
+                <constraint firstItem="111" firstAttribute="centerY" secondItem="6" secondAttribute="centerY" id="r8i-l2-Dkh"/>
+                <constraint firstItem="111" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="rjS-kX-eRO"/>
+                <constraint firstItem="jIH-81-P3j" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="5" id="vV0-OL-ZQC"/>
+            </constraints>
+            <point key="canvasLocation" x="52" y="91.304347826086968"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_ic" width="126.5" height="228.5"/>
+        <image name="sound_off_icon" width="92" height="93"/>
+    </resources>
+</document>

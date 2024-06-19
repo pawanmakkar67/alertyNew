@@ -1,0 +1,17 @@
+
+/* Class = "UILabel"; text = "Alerty"; ObjectID = "ix3-LY-jPq"; */
+"ix3-LY-jPq.text" = "Alerty";
+
+/* Class = "UILabel"; text = "Have an account?"; ObjectID = "sVq-uL-d3h"; */
+"sVq-uL-d3h.text" = "Har du ett konto?";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "Q1D-4T-oeG"; */
+"Q1D-4T-oeG.normalTitle" = "Logga in";
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "cWO-cf-gTP"; */
+"cWO-cf-gTP.text" = "Saknar du konto?";
+
+/* Class = "UIButton"; normalTitle = "Create an account"; ObjectID = "1e9-Ou-slk"; */
+"1e9-Ou-slk.normalTitle" = "Skapa konto";
+
+

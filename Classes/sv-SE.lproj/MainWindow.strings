@@ -1,0 +1,33 @@
+
+/* Class = "UIViewController"; title = "Home"; ObjectID = "255"; */
+"255.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "256"; */
+"256.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "257"; */
+"257.title" = "Home";
+
+/* Class = "UIViewController"; title = "Contacts"; ObjectID = "260"; */
+"260.title" = "Contacts";
+
+/* Class = "UINavigationItem"; title = "Contacts"; ObjectID = "261"; */
+"261.title" = "Contacts";
+
+/* Class = "UITabBarItem"; title = "Contacts"; ObjectID = "262"; */
+"262.title" = "Contacts";
+
+/* Class = "UIViewController"; title = "Functions"; ObjectID = "265"; */
+"265.title" = "Functions";
+
+/* Class = "UINavigationItem"; title = "Functions"; ObjectID = "266"; */
+"266.title" = "Functions";
+
+/* Class = "UITabBarItem"; title = "Functions"; ObjectID = "267"; */
+"267.title" = "Functions";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "16T-sd-CLi"; */
+"16T-sd-CLi.title" = "Settings";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "3vk-uW-2ZS"; */
+"3vk-uW-2ZS.title" = "Settings";

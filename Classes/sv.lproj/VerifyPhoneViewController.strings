@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Resend"; ObjectID = "DPP-eG-hhD"; */
+"DPP-eG-hhD.normalTitle" = "Skicka igen";
+
+/* Class = "UITextField"; placeholder = "Verification code"; ObjectID = "LKp-xH-luF"; */
+"LKp-xH-luF.placeholder" = "Verifieringskod";
+
+/* Class = "UILabel"; text = "Please enter the verification code that were sent to you by SMS."; ObjectID = "N0H-9Z-uMI"; */
+"N0H-9Z-uMI.text" = "Ange verifieringskoden du mottagit via SMS.";
+
+/* Class = "UIButton"; normalTitle = "Verify"; ObjectID = "f5E-Bm-wKc"; */
+"f5E-Bm-wKc.normalTitle" = "Verifiera";

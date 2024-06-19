@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "+46700000000"; ObjectID = "LKp-xH-luF"; */
+"LKp-xH-luF.placeholder" = "+46700000000";
+
+/* Class = "UILabel"; text = "Your number is used to easier connect you and your contacts. When you press next a verification code will be sent to you. You need to enter this in the next step."; ObjectID = "N0H-9Z-uMI"; */
+"N0H-9Z-uMI.text" = "Ditt nummer används för att ansluta dig till dina kontakter. När du trycker på nästa skickas en verifieringskod till dig. Du behöver ange denna i nästa steg.";
+
+/* Class = "UIButton"; normalTitle = "Verify"; ObjectID = "f5E-Bm-wKc"; */
+"f5E-Bm-wKc.normalTitle" = "Verifiera";

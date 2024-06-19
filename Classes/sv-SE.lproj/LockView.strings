@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "47"; */
+"47.text" = "Name:";
+
+/* Class = "UILabel"; text = "Sex:"; ObjectID = "48"; */
+"48.text" = "Sex:";
+
+/* Class = "UILabel"; text = "Age:"; ObjectID = "49"; */
+"49.text" = "Age:";
+
+/* Class = "UILabel"; text = "General info:"; ObjectID = "60"; */
+"60.text" = "General info:";
+
+/* Class = "UIButton"; normalTitle = "Mic off"; ObjectID = "9GW-wi-tP6"; */
+"9GW-wi-tP6.normalTitle" = "Mic off";
+
+/* Class = "UIButton"; selectedTitle = "Mic on"; ObjectID = "9GW-wi-tP6"; */
+"9GW-wi-tP6.selectedTitle" = "Mic on";
+
+/* Class = "UILabel"; text = "Personal information"; ObjectID = "SCV-MO-Ke8"; */
+"SCV-MO-Ke8.text" = "Personal information";
+
+/* Class = "UIButton"; normalTitle = "Front camera"; ObjectID = "dEi-1V-F7f"; */
+"dEi-1V-F7f.normalTitle" = "Front camera";
+
+/* Class = "UIButton"; selectedTitle = "Rear camera"; ObjectID = "dEi-1V-F7f"; */
+"dEi-1V-F7f.selectedTitle" = "Rear camera";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jqJ-Zb-yC5"; */
+"jqJ-Zb-yC5.text" = "Label";
+
+/* Class = "UILabel"; text = "Tap and hold the screen for 3 seconds to activate an alarm.\nImportant! This requires that the phone's automatic screen lock is disabled.\nSwipe to the right and enter your PIN code to cancel the screen lock."; ObjectID = "ziq-kr-E5x"; */
+"ziq-kr-E5x.text" = "Tap and hold the screen for 3 seconds to activate an alarm.\nImportant! This requires that the phone's automatic screen lock is disabled.\nSwipe to the right and enter your PIN code to cancel the screen lock.";

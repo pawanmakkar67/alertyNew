@@ -1,0 +1,19 @@
+/* 
+  Target.strings
+  Alerty
+
+  Created by Viking on 2017. 07. 05..
+
+*/
+
+"Alerty" = "Opus LF";
+
+"Alerty Emergency call" = "Opus LF alarm";
+"I am using Alerty!" = "Online";
+"Not yet a user of Alerty" = "Not yet a user of Opus LF";
+
+"Alerty feedback" = "Opus LF feedback";
+
+"WELCOME_WHITELABEL" = "Sign in with your received user-ID and enter a personal authorization code. The code is used to cancel alarms, turn off features and much more.\nTo turn off authorization code, go to settings.\n \
+Please remember your authorization code!\n \
+If you do not have a user ID, contact the responsible person or send a message to info@getalerty.com";

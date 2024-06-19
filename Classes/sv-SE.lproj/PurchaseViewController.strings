@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "3.99 USD"; ObjectID = "5"; */
+"5.normalTitle" = "3.99 USD";
+
+/* Class = "UILabel"; text = "Alerty Premium features"; ObjectID = "9"; */
+"9.text" = "Alerty Premium features";
+
+/* Class = "UILabel"; text = "- Up to 4 alarm recipients\n- Alarm distribution via Internet and Premium-SMS\n- Alarm activation via shaking movement\n- Trigger via Bluetooth accessories\n- Indoor positioning\n- Real-time video and recording \n- Discreet mode - Alarm recipient groups - Streaming video during an alert - Video call"; ObjectID = "10"; */
+"10.text" = "- Up to 4 alarm recipients\n- Alarm distribution via Internet and Premium-SMS\n- Alarm activation via shaking movement\n- Trigger via Bluetooth accessories\n- Indoor positioning\n- Real-time video and recording \n- Discreet mode - Alarm recipient groups - Streaming video during an alert - Video call";
+
+/* Class = "UIButton"; normalTitle = "Invite"; ObjectID = "13"; */
+"13.normalTitle" = "Invite";
+
+/* Class = "UILabel"; text = "Upgrade to Premium for 3.99 or invite 5 friends to get Premium for free."; ObjectID = "0nk-qU-22Q"; */
+"0nk-qU-22Q.text" = "Upgrade to Premium for 3.99 or invite 5 friends to get Premium for free.";
+
+/* Class = "UILabel"; text = "Invite your friends to Alerty. 5 registered friends will give you Premium for free."; ObjectID = "GSF-6i-JRV"; */
+"GSF-6i-JRV.text" = "Invite your friends to Alerty. 5 registered friends will give you Premium for free.";
+
+/* Class = "UILabel"; text = "Or"; ObjectID = "Ug0-lE-Nl9"; */
+"Ug0-lE-Nl9.text" = "Or";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "c4f-Fg-uTp"; */
+"c4f-Fg-uTp.text" = "10";
+
+/* Class = "UILabel"; text = "Registered"; ObjectID = "lXU-JI-nnr"; */
+"lXU-JI-nnr.text" = "Registered";

@@ -1,0 +1,22 @@
+
+/* Class = "UITextField"; placeholder = "User ID/Email address"; ObjectID = "149"; */
+"149.placeholder" = "Användar-ID/E-postadress";
+
+/* Class = "UITextField"; placeholder = "Authorization code/Password"; ObjectID = "151"; */
+"151.placeholder" = "Behörighetskod/Lösenord";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "161"; */
+"161.normalTitle" = "Logga in";
+
+"RDE-Ve-Nsq.text" = "Företagsanvändare";
+ 
+"3ij-b8-DRl.text" = "Logga in med ditt mottagna användar-ID och ange sedan en personlig behörighetskod. Koden används för att avbryta larm, stänga av funktioner och mycket annat. \
+För att stänga av behörighetskod, gå till inställningar.";
+
+"GYS-7A-vEF.text" = "Privatanvändare";
+
+"TWC-WR-RUy.text" = "Ange den e-postadress och det lösenord du angav då du skapade kontot. \
+Har du problem med att logga in skicka ett meddelande till info@getalerty.com";
+
+"wSq-rN-4M3.text" = "Logga in med ditt mottagna användar-ID och välj sedan en personlig behörighetskod. Koden används för att avbryta larm, stänga av funktioner och mycket annat.\n \
+För att stänga av behörighetskod, gå till inställningar.";

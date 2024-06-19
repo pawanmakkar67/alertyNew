@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Required Permissions"; ObjectID = "5Lq-AG-p0k"; */
+"5Lq-AG-p0k.text" = "Nödvändiga behörigheter";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "Uzk-zL-awt"; */
+"Uzk-zL-awt.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "In order to function properly, Alerty needs access to your position, contacts and microphone. You will now see multiple requests, you need to accept all of them."; ObjectID = "uXi-Te-wBg"; */
+"uXi-Te-wBg.text" = "För att Alerty ska fungera behöver appen tillgång till din platsinfo, notiser, Bluetooth-enheter, mikrofon och kamera. Var vänlig godkänn alla förfrågningarna.";

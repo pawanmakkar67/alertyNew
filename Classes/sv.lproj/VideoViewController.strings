@@ -1,0 +1,28 @@
+
+/* Class = "UILabel"; text = "Calling"; ObjectID = "Bg3-LI-iPn"; */
+"Bg3-LI-iPn.text" = "Ringer";
+
+/* Class = "UIButton"; normalTitle = "Camera"; ObjectID = "FLH-qI-jE2"; */
+"FLH-qI-jE2.normalTitle" = "Kamera";
+
+/* Class = "UIButton"; selectedTitle = "Camera"; ObjectID = "FLH-qI-jE2"; */
+"FLH-qI-jE2.selectedTitle" = "Kamera";
+
+/* Class = "UIButton"; normalTitle = "Video"; ObjectID = "O8G-YL-Phk"; */
+"O8G-YL-Phk.normalTitle" = "Video";
+
+/* Class = "UIButton"; selectedTitle = "Video"; ObjectID = "O8G-YL-Phk"; */
+"O8G-YL-Phk.selectedTitle" = "Video";
+
+/* Class = "UILabel"; text = "Alerty"; ObjectID = "dMP-w3-syO"; */
+"dMP-w3-syO.text" = "Alerty";
+
+/* Class = "UIButton"; normalTitle = "End call"; ObjectID = "oqo-8r-pXU"; */
+"oqo-8r-pXU.normalTitle" = "Avsluta samtal";
+
+/* Class = "UIButton"; normalTitle = "Mic"; ObjectID = "x6w-Ya-dlc"; */
+"x6w-Ya-dlc.normalTitle" = "Video";
+
+/* Class = "UIButton"; selectedTitle = "Mic"; ObjectID = "x6w-Ya-dlc"; */
+"x6w-Ya-dlc.selectedTitle" = "Video";
+

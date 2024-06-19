@@ -1,0 +1,17 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "4"; */
+"4.normalTitle" = "Avbryt";
+
+/* Class = "UILabel"; text = "Man down!"; ObjectID = "5"; */
+"5.text" = "Man down!";
+
+/* Class = "UILabel"; text = "Alarm automatically activates in"; ObjectID = "6"; */
+"6.text" = "Ett larm aktiveras automatiskt om";
+
+/* Class = "UILabel"; text = "30"; ObjectID = "8"; */
+"8.text" = "30";
+
+/* Class = "UILabel"; text = "seconds."; ObjectID = "9"; */
+"9.text" = "sekunder.";
+
+"YFu-y8-1kY.text" = "Rörelselarm";

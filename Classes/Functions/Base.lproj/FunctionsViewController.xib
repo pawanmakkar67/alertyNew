@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FunctionsViewController">
+            <connections>
+                <outlet property="followMeButton" destination="GE7-TY-l5D" id="dHu-5t-ICP"/>
+                <outlet property="homeAlarmButton" destination="Ahi-bU-bHj" id="wL5-XD-JWq"/>
+                <outlet property="manDownButton" destination="VLn-Tc-nWO" id="kZ3-Nw-p2y"/>
+                <outlet property="timerButton" destination="lf0-wE-kiw" id="44A-0z-1ZZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8A-zl-4HC">
+                    <rect key="frame" x="0.0" y="59" width="393" height="133.66666666666666"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="LXN-T0-DpX" appends="YES" id="veS-gl-gOh"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNg-HB-f6C">
+                    <rect key="frame" x="0.0" y="193" width="393" height="659"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lz2-f5-Y3S">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="659"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="reK-OL-bhg">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="213"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oh-Nu-IGm">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE7-TY-l5D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                                    <color key="backgroundColor" name="color_background_functions"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Follow me"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" image="followme_ic">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="functions_followme_active"/>
+                                                    <connections>
+                                                        <action selector="followMePressed:" destination="-1" eventType="touchUpInside" id="9qX-K8-Zef"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnt-uT-m5d">
+                                                    <rect key="frame" x="55.999999999999993" y="161.33333333333331" width="82.333333333333314" height="21.666666666666657"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="color_text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GE7-TY-l5D" secondAttribute="bottom" id="8AP-wM-7BQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="GE7-TY-l5D" secondAttribute="trailing" id="OJu-y5-2eo"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rnt-uT-m5d" secondAttribute="bottom" constant="30" id="Vz5-u7-OHu"/>
+                                                <constraint firstItem="Rnt-uT-m5d" firstAttribute="centerX" secondItem="1oh-Nu-IGm" secondAttribute="centerX" id="dVc-Bc-Xjv"/>
+                                                <constraint firstItem="GE7-TY-l5D" firstAttribute="leading" secondItem="1oh-Nu-IGm" secondAttribute="leading" id="nP0-oS-Kge"/>
+                                                <constraint firstItem="GE7-TY-l5D" firstAttribute="top" secondItem="1oh-Nu-IGm" secondAttribute="top" id="y93-lb-rah"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vif-R4-ZSL">
+                                            <rect key="frame" x="199" y="0.0" width="194" height="213"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLn-Tc-nWO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                                    <color key="backgroundColor" name="color_background_functions"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Man down"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" image="man_ic">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="functions_mandown_active"/>
+                                                    <connections>
+                                                        <action selector="manDownPressed:" destination="-1" eventType="touchUpInside" id="dor-0f-3KA"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man down" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayB-XR-b7i">
+                                                    <rect key="frame" x="54.666666666666657" y="161.33333333333331" width="85" height="21.666666666666657"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="color_text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ayB-XR-b7i" secondAttribute="bottom" constant="30" id="3Hf-Gf-iIX"/>
+                                                <constraint firstItem="VLn-Tc-nWO" firstAttribute="leading" secondItem="Vif-R4-ZSL" secondAttribute="leading" id="9Ow-Dr-AGw"/>
+                                                <constraint firstAttribute="bottom" secondItem="VLn-Tc-nWO" secondAttribute="bottom" id="S4Z-yF-g6Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="VLn-Tc-nWO" secondAttribute="trailing" id="c8Q-hn-FK3"/>
+                                                <constraint firstItem="VLn-Tc-nWO" firstAttribute="top" secondItem="Vif-R4-ZSL" secondAttribute="top" id="hdX-sc-ueQ"/>
+                                                <constraint firstItem="ayB-XR-b7i" firstAttribute="centerX" secondItem="Vif-R4-ZSL" secondAttribute="centerX" id="oxP-5b-LGy"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iEQ-tJ-qun">
+                                    <rect key="frame" x="0.0" y="223" width="393" height="213"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8s-Lp-sJn">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-wE-kiw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                                    <color key="backgroundColor" name="color_background_functions"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Timer alarm"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" image="alarm_ic">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="functions_timer_active"/>
+                                                    <connections>
+                                                        <action selector="timerAlarmPressed:" destination="-1" eventType="touchUpInside" id="mtn-fd-YHf"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-iV-qmW">
+                                                    <rect key="frame" x="48.333333333333336" y="161.33333333333337" width="97.666666666666657" height="21.666666666666657"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="color_text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lf0-wE-kiw" secondAttribute="bottom" id="AJd-cQ-CKk"/>
+                                                <constraint firstAttribute="trailing" secondItem="lf0-wE-kiw" secondAttribute="trailing" id="Dyl-QE-Dqo"/>
+                                                <constraint firstItem="yW5-iV-qmW" firstAttribute="centerX" secondItem="i8s-Lp-sJn" secondAttribute="centerX" id="hIN-1G-s7E"/>
+                                                <constraint firstItem="lf0-wE-kiw" firstAttribute="leading" secondItem="i8s-Lp-sJn" secondAttribute="leading" id="irw-UG-NYz"/>
+                                                <constraint firstItem="lf0-wE-kiw" firstAttribute="top" secondItem="i8s-Lp-sJn" secondAttribute="top" id="m63-yE-tLn"/>
+                                                <constraint firstAttribute="bottom" secondItem="yW5-iV-qmW" secondAttribute="bottom" constant="30" id="mT9-H1-EfQ"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzC-DN-OhV">
+                                            <rect key="frame" x="199" y="0.0" width="194" height="213"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gal-lE-ymD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                                    <color key="backgroundColor" name="color_background_functions"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Screen lock"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" image="lock_ic">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="lockScreenPressed:" destination="-1" eventType="touchUpInside" id="2Gg-Ed-USy"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen lock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9P-tU-n9H">
+                                                    <rect key="frame" x="50.999999999999993" y="161.33333333333337" width="92.333333333333314" height="21.666666666666657"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="color_text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="gal-lE-ymD" firstAttribute="top" secondItem="LzC-DN-OhV" secondAttribute="top" id="2Fe-CP-OO6"/>
+                                                <constraint firstAttribute="trailing" secondItem="gal-lE-ymD" secondAttribute="trailing" id="5Hv-xn-NHA"/>
+                                                <constraint firstAttribute="bottom" secondItem="j9P-tU-n9H" secondAttribute="bottom" constant="30" id="7LG-wn-96M"/>
+                                                <constraint firstAttribute="bottom" secondItem="gal-lE-ymD" secondAttribute="bottom" id="Nxg-gp-bs7"/>
+                                                <constraint firstItem="j9P-tU-n9H" firstAttribute="centerX" secondItem="LzC-DN-OhV" secondAttribute="centerX" id="c1Y-HR-XBs"/>
+                                                <constraint firstItem="gal-lE-ymD" firstAttribute="leading" secondItem="LzC-DN-OhV" secondAttribute="leading" id="etL-Ct-4Ct"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-Sa-R4Y">
+                                    <rect key="frame" x="0.0" y="446" width="393" height="213"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-h9-dMr">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-bU-bHj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                                    <color key="backgroundColor" name="color_background_functions"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Timer alarm"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" image="alarm_ic">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="functions_timer_active"/>
+                                                    <connections>
+                                                        <action selector="homeAlarmPressed:" destination="-1" eventType="touchUpInside" id="H0z-lg-aN0"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvm-vD-TVF">
+                                                    <rect key="frame" x="47.999999999999993" y="161.33333333333337" width="98.333333333333314" height="21.666666666666657"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="color_text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Ahi-bU-bHj" firstAttribute="top" secondItem="tBg-h9-dMr" secondAttribute="top" id="DWO-YD-NFn"/>
+                                                <constraint firstItem="Ahi-bU-bHj" firstAttribute="leading" secondItem="tBg-h9-dMr" secondAttribute="leading" id="Ovw-N6-yM8"/>
+                                                <constraint firstAttribute="bottom" secondItem="tvm-vD-TVF" secondAttribute="bottom" constant="30" id="RW7-QG-tfC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ahi-bU-bHj" secondAttribute="trailing" id="WEs-uH-QHx"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ahi-bU-bHj" secondAttribute="bottom" id="nOl-NE-u4w"/>
+                                                <constraint firstItem="tvm-vD-TVF" firstAttribute="centerX" secondItem="tBg-h9-dMr" secondAttribute="centerX" id="qrQ-VP-ffA"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-ja-Cbf">
+                                            <rect key="frame" x="199" y="0.0" width="194" height="213"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8u-1t-3r9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="213"/>
+                                                    <color key="backgroundColor" name="color_background_functions"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Timer alarm"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" image="alarmOnOff_ic">
+                                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="functions_timer_active"/>
+                                                    <connections>
+                                                        <action selector="LarmPressed:" destination="-1" eventType="touchUpInside" id="v5G-Bs-YzV"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Larm via On/Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-pT-Hi3">
+                                                    <rect key="frame" x="32" y="161.33333333333337" width="130.33333333333334" height="21.666666666666657"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="color_text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="VMd-pT-Hi3" secondAttribute="bottom" constant="30" id="QMq-7S-gxm"/>
+                                                <constraint firstItem="K8u-1t-3r9" firstAttribute="top" secondItem="pKP-ja-Cbf" secondAttribute="top" id="Scm-Du-zpf"/>
+                                                <constraint firstItem="VMd-pT-Hi3" firstAttribute="centerX" secondItem="pKP-ja-Cbf" secondAttribute="centerX" id="Vhz-OR-TLM"/>
+                                                <constraint firstAttribute="bottom" secondItem="K8u-1t-3r9" secondAttribute="bottom" id="Zd5-tu-0bG"/>
+                                                <constraint firstAttribute="trailing" secondItem="K8u-1t-3r9" secondAttribute="trailing" id="nV6-im-cy1"/>
+                                                <constraint firstItem="K8u-1t-3r9" firstAttribute="leading" secondItem="pKP-ja-Cbf" secondAttribute="leading" id="xco-qB-RMP"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="color_background_functions"/>
+                    <constraints>
+                        <constraint firstItem="Lz2-f5-Y3S" firstAttribute="leading" secondItem="mNg-HB-f6C" secondAttribute="leading" id="4T5-74-DW9"/>
+                        <constraint firstAttribute="bottom" secondItem="Lz2-f5-Y3S" secondAttribute="bottom" id="Gv5-7Z-37G"/>
+                        <constraint firstAttribute="trailing" secondItem="Lz2-f5-Y3S" secondAttribute="trailing" id="pda-R0-TAz"/>
+                        <constraint firstItem="Lz2-f5-Y3S" firstAttribute="top" secondItem="mNg-HB-f6C" secondAttribute="top" id="z49-N0-8Qe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ahi-Xb-67G"/>
+            <color key="backgroundColor" white="0.0" alpha="0.2540400256849315" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ahi-Xb-67G" firstAttribute="top" secondItem="k8A-zl-4HC" secondAttribute="top" id="OUT-fY-EDh"/>
+                <constraint firstAttribute="trailing" secondItem="k8A-zl-4HC" secondAttribute="trailing" id="PbN-59-GZL"/>
+                <constraint firstAttribute="bottom" secondItem="mNg-HB-f6C" secondAttribute="bottom" id="Qdf-bX-Uhb"/>
+                <constraint firstItem="mNg-HB-f6C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bYL-za-lgY"/>
+                <constraint firstItem="mNg-HB-f6C" firstAttribute="top" secondItem="k8A-zl-4HC" secondAttribute="bottom" constant="0.5" id="fC1-ie-tXf"/>
+                <constraint firstItem="1oh-Nu-IGm" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.25" id="hYk-lR-aWo"/>
+                <constraint firstItem="k8A-zl-4HC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qyr-wb-477"/>
+                <constraint firstAttribute="trailing" secondItem="mNg-HB-f6C" secondAttribute="trailing" id="tRS-wr-r1q"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="101.5"/>
+        </view>
+        <tapGestureRecognizer id="LXN-T0-DpX">
+            <connections>
+                <action selector="backgroundTapped:" destination="-1" id="X5y-bA-ORG"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="alarmOnOff_ic" width="54" height="54"/>
+        <image name="alarm_ic" width="78" height="78"/>
+        <image name="followme_ic" width="78" height="78"/>
+        <image name="functions_followme_active" width="100" height="100"/>
+        <image name="functions_mandown_active" width="100" height="100"/>
+        <image name="functions_timer_active" width="100" height="100"/>
+        <image name="lock_ic" width="100" height="100"/>
+        <image name="man_ic" width="100" height="100"/>
+        <namedColor name="color_background_functions">
+            <color red="0.17299999296665192" green="0.18799999356269836" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_text">
+            <color red="0.17299999296665192" green="0.18799999356269836" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

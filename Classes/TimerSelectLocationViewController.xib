@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerSelectLocationViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="weP-aJ-GO6" id="dah-Ck-GRL"/>
+                <outlet property="location" destination="e50-gG-f4y" id="vs5-1B-ADj"/>
+                <outlet property="mapContainer" destination="oh5-vb-TI7" id="xlV-Pq-nYB"/>
+                <outlet property="saveButton" destination="ebA-mg-hpk" id="Fgs-Fw-akm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e50-gG-f4y" customClass="HoshiTextField">
+                    <rect key="frame" x="15" y="80" width="305" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="qV9-X6-qzE"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="C7b-jq-N9U"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7C-cA-bHv">
+                    <rect key="frame" x="324" y="90" width="36" height="36"/>
+                    <state key="normal" image="timer_sync"/>
+                    <connections>
+                        <action selector="updatePressed:" destination="-1" eventType="touchUpInside" id="OaV-8F-qVz"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oh5-vb-TI7">
+                    <rect key="frame" x="0.0" y="138" width="375" height="439"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" image="crosshair.png" highlightedImage="crosshair.png" translatesAutoresizingMaskIntoConstraints="NO" id="wnu-b6-8Kj">
+                            <rect key="frame" x="142.5" y="188.5" width="90" height="62"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnB-3O-fhP">
+                            <rect key="frame" x="335" y="8" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="PDC-cx-bVJ"/>
+                                <constraint firstAttribute="height" constant="32" id="g0L-Sf-xMH"/>
+                            </constraints>
+                            <state key="normal" image="alert_center"/>
+                            <connections>
+                                <action selector="showMyLocationPressed:" destination="-1" eventType="touchUpInside" id="pU3-4I-i4d"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="wnu-b6-8Kj" firstAttribute="centerY" secondItem="oh5-vb-TI7" secondAttribute="centerY" id="0Mh-A8-2ks"/>
+                        <constraint firstItem="wnu-b6-8Kj" firstAttribute="centerX" secondItem="oh5-vb-TI7" secondAttribute="centerX" id="bW1-lA-EBj"/>
+                        <constraint firstItem="RnB-3O-fhP" firstAttribute="top" secondItem="oh5-vb-TI7" secondAttribute="top" constant="8" id="rLi-dK-7A7"/>
+                        <constraint firstAttribute="trailing" secondItem="RnB-3O-fhP" secondAttribute="trailing" constant="8" id="z5b-Fj-haV"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-mg-hpk">
+                    <rect key="frame" x="20" y="597" width="335" height="50"/>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.31764705882352939" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JoS-eJ-IVh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="savePressed:" destination="-1" eventType="touchUpInside" id="c7K-FU-XTJ"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="weP-aJ-GO6">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="e50-gG-f4y" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="1A1-0O-NJy"/>
+                <constraint firstItem="oh5-vb-TI7" firstAttribute="top" secondItem="e50-gG-f4y" secondAttribute="bottom" constant="12" id="5Tb-az-Ihi"/>
+                <constraint firstItem="e50-gG-f4y" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" priority="750" constant="8" id="IaM-SM-sig"/>
+                <constraint firstItem="b7C-cA-bHv" firstAttribute="bottom" secondItem="e50-gG-f4y" secondAttribute="bottom" id="M4K-Ho-MOa"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="e50-gG-f4y" secondAttribute="trailing" constant="55" id="VkR-73-8AA"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="ebA-mg-hpk" secondAttribute="bottom" constant="20" id="X0W-Zt-kZr"/>
+                <constraint firstItem="ebA-mg-hpk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="afK-XR-z68"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ebA-mg-hpk" secondAttribute="trailing" constant="20" id="gzz-Oj-fBl"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="oh5-vb-TI7" secondAttribute="trailing" id="itH-uu-zYP"/>
+                <constraint firstItem="e50-gG-f4y" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="mRA-SQ-1z6"/>
+                <constraint firstItem="oh5-vb-TI7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="plE-Pi-8op"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="b7C-cA-bHv" secondAttribute="trailing" constant="15" id="tv5-o7-01Y"/>
+                <constraint firstItem="ebA-mg-hpk" firstAttribute="top" secondItem="oh5-vb-TI7" secondAttribute="bottom" constant="20" id="vdl-Aa-lXb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="132" y="123"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="alert_center" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="crosshair.png" width="90" height="62"/>
+        <image name="timer_sync" width="36" height="36"/>
+    </resources>
+</document>

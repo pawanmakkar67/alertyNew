@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWU-aq-RaZ">
+                                <rect key="frame" x="0.0" y="134" width="375" height="399"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Vg-rJ-nF2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press and hold the screen for 3 seconds to activate an alarm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdO-xY-qKG">
+                                        <rect key="frame" x="32" y="301" width="311" height="48"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2Vg-rJ-nF2" secondAttribute="trailing" id="0Fx-Vm-Gyh"/>
+                                    <constraint firstAttribute="bottom" secondItem="OdO-xY-qKG" secondAttribute="bottom" constant="50" id="M5Y-19-tq8"/>
+                                    <constraint firstItem="2Vg-rJ-nF2" firstAttribute="top" secondItem="VWU-aq-RaZ" secondAttribute="top" id="eeM-JZ-xKM"/>
+                                    <constraint firstAttribute="trailing" secondItem="OdO-xY-qKG" secondAttribute="trailing" constant="32" id="kN4-1s-dR8"/>
+                                    <constraint firstItem="2Vg-rJ-nF2" firstAttribute="leading" secondItem="VWU-aq-RaZ" secondAttribute="leading" id="pri-CN-Yhd"/>
+                                    <constraint firstItem="OdO-xY-qKG" firstAttribute="top" secondItem="2Vg-rJ-nF2" secondAttribute="bottom" constant="50" id="r7p-z3-4q4"/>
+                                    <constraint firstItem="OdO-xY-qKG" firstAttribute="leading" secondItem="VWU-aq-RaZ" secondAttribute="leading" constant="32" id="tI1-mm-EV3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.45882352939999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VWU-aq-RaZ" secondAttribute="trailing" id="31B-AH-JNf"/>
+                            <constraint firstItem="VWU-aq-RaZ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3fF-jf-srf"/>
+                            <constraint firstItem="VWU-aq-RaZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="diL-fI-38G"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="141" height="251"/>
+    </resources>
+</document>

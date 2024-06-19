@@ -1,0 +1,84 @@
+
+/* Class = "UITextField"; placeholder = "User ID"; ObjectID = "149"; */
+"149.placeholder" = "User ID";
+
+/* Class = "UITextField"; placeholder = "Authorization code"; ObjectID = "151"; */
+"151.placeholder" = "Authorization code";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "161"; */
+"161.normalTitle" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "164"; */
+"164.normalTitle" = "Sign in";
+
+/* Class = "UILabel"; text = "Already have a business account?"; ObjectID = "175"; */
+"175.text" = "Already have a business account?";
+
+/* Class = "UIButton"; normalTitle = "Create an account"; ObjectID = "181"; */
+"181.normalTitle" = "Create an account";
+
+/* Class = "UILabel"; text = "Do you want to"; ObjectID = "182"; */
+"182.text" = "Do you want to";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "193"; */
+"193.normalTitle" = "Next";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "197"; */
+"197.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Your email address"; ObjectID = "198"; */
+"198.placeholder" = "Your email address";
+
+/* Class = "UITextField"; placeholder = "Repeat password"; ObjectID = "200"; */
+"200.placeholder" = "Repeat password";
+
+/* Class = "UILabel"; text = "You have now completed all steps required to use Alerty. Here is a short guide on how to use Alerty."; ObjectID = "207"; */
+"207.text" = "You have now completed all steps required to use Alerty. Here is a short guide on how to use Alerty.";
+
+/* Class = "UILabel"; text = "Multiple ways to activate an alert, hold the screen for 3 seconds, Man Down, Motion activation or using a Bluetooth device."; ObjectID = "209"; */
+"209.text" = "Multiple ways to activate an alert, hold the screen for 3 seconds, Man Down, Motion activation or using a Bluetooth device.";
+
+/* Class = "UILabel"; text = "Manage your contacts, the recipients of your alerts."; ObjectID = "212"; */
+"212.text" = "Manage your contacts, the recipients of your alerts.";
+
+/* Class = "UILabel"; text = "Follow me allows selected contacts to follow you on a map."; ObjectID = "215"; */
+"215.text" = "Follow me allows selected contacts to follow you on a map.";
+
+/* Class = "UILabel"; text = "Settings, indoor positioning, alert history and more."; ObjectID = "219"; */
+"219.text" = "Settings, indoor positioning, alert history and more.";
+
+/* Class = "UILabel"; text = "The screen lock will turn the whole screen to an alert button. Hold the screen for 3 seconds to activate an alert."; ObjectID = "221"; */
+"221.text" = "The screen lock will turn the whole screen to an alert button. Hold the screen for 3 seconds to activate an alert.";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "223"; */
+"223.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Please enter your name and authorization code. The name will be used in the alerts you send.\nThe authorization code is used to cancel alerts and to unlock your app."; ObjectID = "235"; */
+"235.text" = "Please enter your name and authorization code. The name will be used in the alerts you send.\nThe authorization code is used to cancel alerts and to unlock your app.";
+
+/* Class = "UILabel"; text = "Pick someone who will receive your alerts."; ObjectID = "237"; */
+"237.text" = "Pick someone who will receive your alerts.";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "238"; */
+"238.normalTitle" = "Next";
+
+/* Class = "UITextField"; placeholder = "Authorization code"; ObjectID = "242"; */
+"242.placeholder" = "Authorization code";
+
+/* Class = "UITextField"; placeholder = "Full name"; ObjectID = "243"; */
+"243.placeholder" = "Full name";
+
+/* Class = "UILabel"; text = "If you got a referral code, enter it here"; ObjectID = "TAD-eQ-Fns"; */
+"TAD-eQ-Fns.text" = "If you got a referral code, enter it here";
+
+/* Class = "UITextField"; placeholder = "Referral code"; ObjectID = "UUR-ce-ky0"; */
+"UUR-ce-ky0.placeholder" = "Referral code";
+
+/* Class = "UILabel"; text = "Alerty"; ObjectID = "Whd-Cz-0S6"; */
+"Whd-Cz-0S6.text" = "Alerty";
+
+/* Class = "UILabel"; text = "Important!"; ObjectID = "iC5-Va-o0C"; */
+"iC5-Va-o0C.text" = "Important!";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "oKV-Ab-qib"; */
+"oKV-Ab-qib.normalTitle" = "OK";

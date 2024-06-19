@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Please enter your name and authorization code. The name will be used in the alerts you send.\nThe authorization code is used to cancel alerts and to unlock your app."; ObjectID = "235"; */
+"235.text" = "Var vänlig ange ditt namn och en personlig behörighetskod. Koden används för att avbryta larm, stänga av funktioner och mycket annat.\nKom ihåg din behörighetskod!";
+
+/* Class = "UILabel"; text = "Pick someone who will receive your alerts."; ObjectID = "237"; */
+"237.text" = "Välj en person du vill ska ta emot ditt larm .";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "238"; */
+"238.normalTitle" = "Nästa";
+
+/* Class = "UITextField"; placeholder = "Authorization code"; ObjectID = "242"; */
+"242.placeholder" = "Behörighetskod";
+
+/* Class = "UITextField"; placeholder = "Full name"; ObjectID = "243"; */
+"243.placeholder" = "För och efternamn";
+
+/* Class = "UITextField"; placeholder = "Your email address"; ObjectID = "F9v-4L-KmC"; */
+"F9v-4L-KmC.placeholder" = "Din e-postadress";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "FbL-js-xPl"; */
+"FbL-js-xPl.placeholder" = "Lösenord";
+
+/* Class = "UILabel"; text = "If you got a referral code, enter it here"; ObjectID = "TAD-eQ-Fns"; */
+"TAD-eQ-Fns.text" = "Om du har en rabattkod ange den här";
+
+/* Class = "UITextField"; placeholder = "Referral code"; ObjectID = "UUR-ce-ky0"; */
+"UUR-ce-ky0.placeholder" = "Rabattkod";
+
+/* Class = "UITextField"; placeholder = "Repeat password"; ObjectID = "Voo-si-QSt"; */
+"Voo-si-QSt.placeholder" = "Upprepa lösenord";
+
+/* Class = "UITextField"; placeholder = "+ Add contact"; ObjectID = "iBN-5j-u9n"; */
+"iBN-5j-u9n.placeholder" = "+ Lägg till mottagare";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "mFZ-vr-glB"; */
+"mFZ-vr-glB.normalTitle" = "Nästa";
+
+/* Class = "UILabel"; text = "Company user"; ObjectID = "mLF-tr-9p4"; */
+"mLF-tr-9p4.text" = "Företagsanvändare";
+
+/* Class = "UILabel"; text = "As a business user, you can not create an account here. Please contact info@getalerty.com"; ObjectID = "yuv-i7-yIR"; */
+"yuv-i7-yIR.text" = "Som företagsanvändare kan du inte skapa konto här. Kontakta oss info@getalerty.com";
+
+/* Class = "UILabel"; text = "Individual user"; ObjectID = "02t-ce-5kn"; */
+"02t-ce-5kn.text" = "Privatanvändare";
+
+/* Class = "UILabel"; text = "Enter the email address and password."; ObjectID = "8jc-ye-fXl"; */
+"8jc-ye-fXl.text" = "Ange en e-postadress och ett lösenord.";

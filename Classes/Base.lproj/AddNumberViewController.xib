@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNumberViewController">
+            <connections>
+                <outlet property="txtVerificationCode" destination="LKp-xH-luF" id="Awe-lZ-aUp"/>
+                <outlet property="verifyButton" destination="f5E-Bm-wKc" id="N8K-Rd-a5P"/>
+                <outlet property="view" destination="4" id="12"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+46700000000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKp-xH-luF" customClass="HoshiTextField">
+                    <rect key="frame" x="20" y="20" width="280" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="UUX-NX-2Tx"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0H-9Z-uMI">
+                    <rect key="frame" x="20" y="86" width="280" height="108"/>
+                    <string key="text">Your number is used to easier connect you and your contacts. When you press next a verification code will be sent to you. You need to enter this in the next step.</string>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5E-Bm-wKc">
+                    <rect key="frame" x="20" y="214" width="120" height="44"/>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.31764705882352939" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="P7c-7q-RBZ"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="120" id="d8F-tY-L9a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                    <state key="normal" title="Verify">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="verify:" destination="-1" eventType="touchUpInside" id="h7N-QV-tLS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f5E-Bm-wKc" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" id="18c-4v-wzv"/>
+                <constraint firstItem="N0H-9Z-uMI" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" id="6bz-hd-1AR"/>
+                <constraint firstAttribute="trailing" secondItem="LKp-xH-luF" secondAttribute="trailing" constant="20" id="F3Q-bV-hJi"/>
+                <constraint firstItem="N0H-9Z-uMI" firstAttribute="top" secondItem="LKp-xH-luF" secondAttribute="bottom" constant="20" id="Hfe-JX-PLn"/>
+                <constraint firstItem="LKp-xH-luF" firstAttribute="top" secondItem="4" secondAttribute="top" constant="20" id="Tjf-iI-GDe"/>
+                <constraint firstItem="f5E-Bm-wKc" firstAttribute="top" secondItem="N0H-9Z-uMI" secondAttribute="bottom" constant="20" id="UCu-6u-fWt"/>
+                <constraint firstItem="LKp-xH-luF" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" id="h0X-KA-2KN"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f5E-Bm-wKc" secondAttribute="trailing" constant="20" id="jJk-J1-rz3"/>
+                <constraint firstAttribute="trailing" secondItem="N0H-9Z-uMI" secondAttribute="trailing" constant="20" id="sIy-w6-LnE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131" y="145"/>
+        </view>
+    </objects>
+</document>

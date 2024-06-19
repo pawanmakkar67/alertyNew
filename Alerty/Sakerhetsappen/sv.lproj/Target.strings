@@ -1,0 +1,19 @@
+/* 
+  Target.strings
+  Alerty
+
+  Created by Viking on 2017. 07. 05..
+
+*/
+
+"Alerty" = "Säkappen";
+
+"Alerty Emergency call" = "Säkappen larm";
+"I am using Alerty!" = "Online";
+"Not yet a user of Alerty" = "Ännu inte en användare av Säkappen";
+
+"Alerty feedback" = "Säkappen feedback";
+
+"WELCOME_WHITELABEL" = "Logga in med ditt mottagna användar-ID och välj sedan en personlig behörighetskod. Koden används för att avbryta larm, stänga av funktioner och mycket annat.\n\
+Kom ihåg din behörighetskod!\n \
+Saknar du ett användar-ID kontakta ansvarig person.";

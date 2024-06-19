@@ -1,0 +1,19 @@
+
+/* Class = "UIImageView"; accessibilityLabel = "Swipe to cancel"; ObjectID = "23"; */
+"23.accessibilityLabel" = "Dra för att avbryta";
+
+/* Class = "UILabel"; text = "Alarm active"; ObjectID = "4hc-9F-Z6z"; */
+"4hc-9F-Z6z.text" = "Larm aktivt";
+
+/* Class = "UIButton"; normalTitle = "Mic off"; ObjectID = "9GW-wi-tP6"; */
+"9GW-wi-tP6.normalTitle" = "Mik av";
+
+/* Class = "UIButton"; selectedTitle = "Mic on"; ObjectID = "9GW-wi-tP6"; */
+"9GW-wi-tP6.selectedTitle" = "Mik på";
+
+/* Class = "UILabel"; text = "Swipe to cancel"; ObjectID = "H5d-0O-XP4"; */
+"H5d-0O-XP4.text" = "Dra för att avbryta";
+
+/* Class = "UILabel"; text = "Tap and hold the screen for 3 seconds to activate an alarm.\nImportant! This requires that the phone's automatic screen lock is disabled.\nSwipe to the right and enter your PIN code to cancel the screen lock."; ObjectID = "ziq-kr-E5x"; */
+"ziq-kr-E5x.text" = "Tryck och håll på skärmen i 3 sekunder för att aktivera ett larm.\nObservera! Detta kräver att din telefons automatiska skärmlås inaktiveras.\nDra till höger och ange din verifieringskod för att avsluta Alertys skärmlås.";
+

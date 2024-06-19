@@ -1,0 +1,13 @@
+
+/* Class = "UIButton"; normalTitle = "Test"; ObjectID = "4m9-dT-10x"; */
+"4m9-dT-10x.normalTitle" = "Test";
+
+/* Class = "UILabel"; text = "Level"; ObjectID = "Iz1-ZJ-Fxp"; */
+"Iz1-ZJ-Fxp.text" = "Känslighet";
+
+/* Class = "UILabel"; text = "This slider will set the level of force needed to trigger an alarm when Man down is activated."; ObjectID = "bTd-VX-Ikr"; */
+"bTd-VX-Ikr.text" = "Här justerar du den kraft som behövs för att aktivera ett Man down-larm.";
+
+"jSo-ne-03m.text" = "Lutningsvinkel";
+
+"16q-cl-SaU.text" = "Utlöser larm under angiven lutningsvinkel.";

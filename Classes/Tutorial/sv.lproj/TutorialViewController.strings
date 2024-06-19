@@ -1,0 +1,31 @@
+
+/* Class = "UILabel"; text = "Here you can add the contacts
+that will receice your alarms"; ObjectID = "6sp-Kz-2b7"; */
+"6sp-Kz-2b7.text" = "Här lägger du personerna som\
+du vill ska ta emot ditt larm";
+
+/* Class = "UIButton"; normalTitle = "Dismiss guide"; ObjectID = "AQM-r8-swn"; */
+"AQM-r8-swn.normalTitle" = "Gå direkt till appen";
+
+/* Class = "UILabel"; text = "You will find more ways to
+activate an alarm here"; ObjectID = "KQ4-nZ-0Ow"; */
+"KQ4-nZ-0Ow.text" = "Du hittar fler sätt att\
+aktivera larm på här";
+
+/* Class = "UILabel"; text = "This is where you find all settings.
+Here you can configure your
+account, see your alarm history
+and much more"; ObjectID = "Knd-Fw-1rR"; */
+"Knd-Fw-1rR.text" = "Här hittar du appens inställningar.\
+Här kan du configurera ditt konto, se \
+din larmhistorik och mycket annat";
+
+/* Class = "UILabel"; text = "Press and hold the
+screen for 3 seconds
+to activate an alarm"; ObjectID = "jG9-Ab-d9j"; */
+"jG9-Ab-d9j.text" = "Tryck och håll på skärmen\
+i 3 sekunder för att\
+aktivera ett larm";
+
+"fCs-Gd-FPf.text" = "LARM";
+"qmz-Yb-VIQ.text" = "KONTAKTER";

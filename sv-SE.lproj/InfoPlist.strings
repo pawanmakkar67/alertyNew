@@ -1,0 +1,20 @@
+/* 
+  InfoPlist.strings
+  Alerty
+
+  Created by Gergely Meszaros-Komaromy on 12/10/16.
+
+*/
+
+"NSMicrophoneUsageDescription" = "To be able to capture audio and video during alarms.";
+
+"NSMotionUsageDescription" = "To detect motions when Man down is activated.";
+
+"NSPhotoLibraryUsageDescription" = "We are not using this functionality right now";
+
+"NSBluetoothPeripheralUsageDescription" = "To be able to connect to Flic, Pebble and iBeacons.";
+
+"NSCameraUsageDescription" = "To be able to capture audio and video during alarms.";
+
+"NSContactsUsageDescription" = "To be able to select alarm recipients.";
+

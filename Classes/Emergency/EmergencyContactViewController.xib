@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmergencyContactViewController">
+            <connections>
+                <outlet property="createBtn" destination="7QF-P9-kdm" id="tvG-Uc-PMo"/>
+                <outlet property="helpImage" destination="S6h-pr-Zmg" id="yvl-W8-9Tm"/>
+                <outlet property="linkButton" destination="OnO-Gq-UP0" id="Egf-WM-OBq"/>
+                <outlet property="messageContentLabel" destination="3kV-AQ-oDm" id="ZHn-sJ-ct7"/>
+                <outlet property="messageLabel" destination="5Fr-ax-Rvp" id="k2h-eD-blb"/>
+                <outlet property="messageNoteLabel" destination="jmv-4S-ZLY" id="xev-E4-FVj"/>
+                <outlet property="titleLabel" destination="VNf-NO-9BA" id="k4b-qp-fBd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" translatesAutoresizingMaskIntoConstraints="NO" id="Pmf-Ne-yfI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZr-lG-bue">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1039.5"/>
+                            <subviews>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" text="Create an “Emergency contact”" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-NO-9BA">
+                                    <rect key="frame" x="36" y="20" width="342" height="22"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnO-Gq-UP0">
+                                    <rect key="frame" x="36" y="57" width="86" height="34"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                    <state key="normal" title="Read more">
+                                        <color key="titleColor" red="0.41568627450000001" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="readMorePressed:" destination="-1" eventType="touchUpInside" id="lDi-Bl-YNg"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" verticalCompressionResistancePriority="759" text="Do you want to create a contact to enable an alarm in connection with the Emergency SOS?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="5Fr-ax-Rvp">
+                                    <rect key="frame" x="36" y="101" width="342" height="38.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" verticalCompressionResistancePriority="759" text="Do you want to create a contact to enable an alarm in connection with the Emergency SOS?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-AQ-oDm">
+                                    <rect key="frame" x="36" y="159.5" width="342" height="36"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" verticalCompressionResistancePriority="759" text="Do you want to create a contact to enable an alarm in connection with the Emergency SOS?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-4S-ZLY">
+                                    <rect key="frame" x="36" y="215.5" width="342" height="34"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="758" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QF-P9-kdm">
+                                    <rect key="frame" x="36" y="285.5" width="342" height="50"/>
+                                    <color key="backgroundColor" red="0.15686274510000001" green="0.31764705879999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="cw4-X5-hms"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                    <state key="normal" title="Create">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="createPressed:" destination="-1" eventType="touchUpInside" id="HiP-tu-W2c"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_help" translatesAutoresizingMaskIntoConstraints="NO" id="S6h-pr-Zmg">
+                                    <rect key="frame" x="36" y="355.5" width="342" height="684"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="S6h-pr-Zmg" secondAttribute="height" multiplier="1:2" id="s6M-yq-96d"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="5Fr-ax-Rvp" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="0lX-08-9ai"/>
+                                <constraint firstAttribute="trailing" secondItem="3kV-AQ-oDm" secondAttribute="trailing" constant="36" id="0zV-ad-TbO"/>
+                                <constraint firstItem="VNf-NO-9BA" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="7xi-RQ-1UQ"/>
+                                <constraint firstItem="7QF-P9-kdm" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="9sL-3T-Qqa"/>
+                                <constraint firstItem="OnO-Gq-UP0" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="Bmg-k2-xxY"/>
+                                <constraint firstItem="7QF-P9-kdm" firstAttribute="top" secondItem="jmv-4S-ZLY" secondAttribute="bottom" constant="36" id="D8y-fT-c3e"/>
+                                <constraint firstItem="5Fr-ax-Rvp" firstAttribute="top" secondItem="OnO-Gq-UP0" secondAttribute="bottom" constant="10" id="JNm-jO-36p"/>
+                                <constraint firstItem="3kV-AQ-oDm" firstAttribute="top" secondItem="5Fr-ax-Rvp" secondAttribute="bottom" constant="20" id="MVg-66-fU8"/>
+                                <constraint firstAttribute="trailing" secondItem="5Fr-ax-Rvp" secondAttribute="trailing" constant="36" id="P45-1v-T4t"/>
+                                <constraint firstItem="S6h-pr-Zmg" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="PIR-Hz-Nf5"/>
+                                <constraint firstAttribute="trailing" secondItem="S6h-pr-Zmg" secondAttribute="trailing" constant="36" id="PqO-aZ-PfD"/>
+                                <constraint firstItem="jmv-4S-ZLY" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="Z6C-28-kWC"/>
+                                <constraint firstItem="S6h-pr-Zmg" firstAttribute="top" secondItem="7QF-P9-kdm" secondAttribute="bottom" constant="20" id="f27-XK-cAj"/>
+                                <constraint firstAttribute="bottom" secondItem="S6h-pr-Zmg" secondAttribute="bottom" id="f8t-Jj-OE5"/>
+                                <constraint firstItem="VNf-NO-9BA" firstAttribute="top" secondItem="NZr-lG-bue" secondAttribute="top" constant="20" id="gdz-Vy-IVd"/>
+                                <constraint firstItem="3kV-AQ-oDm" firstAttribute="leading" secondItem="NZr-lG-bue" secondAttribute="leading" constant="36" id="gwd-wC-hkp"/>
+                                <constraint firstAttribute="trailing" secondItem="jmv-4S-ZLY" secondAttribute="trailing" constant="36" id="l58-Rs-CyU"/>
+                                <constraint firstAttribute="trailing" secondItem="7QF-P9-kdm" secondAttribute="trailing" constant="36" id="o9T-g3-lfx"/>
+                                <constraint firstItem="OnO-Gq-UP0" firstAttribute="top" secondItem="VNf-NO-9BA" secondAttribute="bottom" constant="15" id="o9t-RH-Mi3"/>
+                                <constraint firstAttribute="trailing" secondItem="VNf-NO-9BA" secondAttribute="trailing" constant="36" id="rJ7-SR-H2e"/>
+                                <constraint firstItem="jmv-4S-ZLY" firstAttribute="top" secondItem="3kV-AQ-oDm" secondAttribute="bottom" constant="20" id="tKy-oK-YH1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="NZr-lG-bue" firstAttribute="width" secondItem="Pmf-Ne-yfI" secondAttribute="width" id="28w-aS-gH3"/>
+                        <constraint firstAttribute="bottom" secondItem="NZr-lG-bue" secondAttribute="bottom" id="hqg-oH-ndZ"/>
+                        <constraint firstItem="NZr-lG-bue" firstAttribute="top" secondItem="Pmf-Ne-yfI" secondAttribute="top" id="lmw-1j-SoB"/>
+                        <constraint firstAttribute="trailing" secondItem="NZr-lG-bue" secondAttribute="trailing" id="rnS-vj-KWX"/>
+                        <constraint firstItem="NZr-lG-bue" firstAttribute="leading" secondItem="Pmf-Ne-yfI" secondAttribute="leading" id="wtl-rH-ibY"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="4nQ-ar-VbR"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Znk-0Q-3XS"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Pmf-Ne-yfI" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="2Ek-ft-SFP"/>
+                <constraint firstItem="Pmf-Ne-yfI" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="cEO-Ph-EM2"/>
+                <constraint firstAttribute="bottom" secondItem="Pmf-Ne-yfI" secondAttribute="bottom" id="grU-dj-ayI"/>
+                <constraint firstItem="Pmf-Ne-yfI" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="hk5-7O-2we"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="create_help" width="305" height="612"/>
+    </resources>
+</document>

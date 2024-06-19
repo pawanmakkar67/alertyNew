@@ -1,0 +1,54 @@
+/* list */
+
+body {
+	background-color: #464646;
+}
+
+ul {
+	list-style-image: url(redball.gif);
+}
+
+/* list item */
+li {
+	color: #ffffff;
+	font-size: 14pt;
+}
+
+/* title */
+.bT {
+	color: #ffffff;
+	font-size: 17pt;
+}
+
+/* title big */
+.bTB {
+	color: #ffffff;
+	font-size: 25pt;
+	text-align: center;
+}
+
+/* content */
+.bC {
+	color: #ffffff;
+	font-size: 12pt;
+}
+
+a:link {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:visited {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:active {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}

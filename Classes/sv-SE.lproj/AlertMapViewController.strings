@@ -1,0 +1,90 @@
+
+/* Class = "UILabel"; text = "Age:"; ObjectID = "2qS-5V-hIg"; */
+"2qS-5V-hIg.text" = "Age:";
+
+/* Class = "UILabel"; text = "PERSONAL INFORMATION"; ObjectID = "3Tp-Uf-3c4"; */
+"3Tp-Uf-3c4.text" = "PERSONAL INFORMATION";
+
+/* Class = "UILabel"; text = "Accuracy:"; ObjectID = "6s8-IE-XzB"; */
+"6s8-IE-XzB.text" = "Accuracy:";
+
+/* Class = "UILabel"; text = "View"; ObjectID = "9Jx-RR-UsW"; */
+"9Jx-RR-UsW.text" = "View";
+
+/* Class = "UIButton"; normalTitle = "Personal"; ObjectID = "Ci3-mh-Rrs"; */
+"Ci3-mh-Rrs.normalTitle" = "Personal";
+
+/* Class = "UIButton"; normalTitle = "Mic off"; ObjectID = "EqE-n2-UD6"; */
+"EqE-n2-UD6.normalTitle" = "Mic off";
+
+/* Class = "UIButton"; selectedTitle = "Mic on"; ObjectID = "EqE-n2-UD6"; */
+"EqE-n2-UD6.selectedTitle" = "Mic on";
+
+/* Class = "UIButton"; normalTitle = "HELP24"; ObjectID = "FA9-B7-KZZ"; */
+"FA9-B7-KZZ.normalTitle" = "HELP24";
+
+/* Class = "UILabel"; text = "General info:"; ObjectID = "J4e-UG-riT"; */
+"J4e-UG-riT.text" = "General info:";
+
+/* Class = "UIButton"; normalTitle = "Video off"; ObjectID = "JRs-TT-txi"; */
+"JRs-TT-txi.normalTitle" = "Video off";
+
+/* Class = "UIButton"; selectedTitle = "Video on"; ObjectID = "JRs-TT-txi"; */
+"JRs-TT-txi.selectedTitle" = "Video on";
+
+/* Class = "UILabel"; text = "ICE CONTACTS"; ObjectID = "KgY-ts-UGi"; */
+"KgY-ts-UGi.text" = "ICE CONTACTS";
+
+/* Class = "UIButton"; disabledTitle = "Accepted"; ObjectID = "PxU-SO-kdH"; */
+"PxU-SO-kdH.disabledTitle" = "Accepted";
+
+/* Class = "UIButton"; normalTitle = "Accept alarm"; ObjectID = "PxU-SO-kdH"; */
+"PxU-SO-kdH.normalTitle" = "Accept alarm";
+
+/* Class = "UILabel"; text = "Alarm type:"; ObjectID = "QAr-Cb-NyD"; */
+"QAr-Cb-NyD.text" = "Alarm type:";
+
+/* Class = "UILabel"; text = "Activated:"; ObjectID = "U0Z-Ml-evV"; */
+"U0Z-Ml-evV.text" = "Activated:";
+
+/* Class = "UILabel"; text = "Decline"; ObjectID = "XVh-8Q-uz1"; */
+"XVh-8Q-uz1.text" = "Decline";
+
+/* Class = "UILabel"; text = "Address:"; ObjectID = "agY-LO-ACr"; */
+"agY-LO-ACr.text" = "Address:";
+
+/* Class = "UIButton"; normalTitle = "Call SOS 112"; ObjectID = "asS-tD-JmI"; */
+"asS-tD-JmI.normalTitle" = "Call SOS 112";
+
+/* Class = "UILabel"; text = "Sex:"; ObjectID = "f8Y-DV-cg0"; */
+"f8Y-DV-cg0.text" = "Sex:";
+
+/* Class = "UILabel"; text = "Location:"; ObjectID = "g0V-8T-g8T"; */
+"g0V-8T-g8T.text" = "Location:";
+
+/* Class = "UILabel"; text = "Alerty"; ObjectID = "g4A-zY-2TP"; */
+"g4A-zY-2TP.text" = "Alerty";
+
+/* Class = "UIButton"; normalTitle = "Video call"; ObjectID = "jKx-cM-UWA"; */
+"jKx-cM-UWA.normalTitle" = "Video call";
+
+/* Class = "UILabel"; text = "Waiting for location"; ObjectID = "nqp-EL-VE9"; */
+"nqp-EL-VE9.text" = "Waiting for location";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oQV-o5-WCM"; */
+"oQV-o5-WCM.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "r34-Rj-b7Q"; */
+"r34-Rj-b7Q.normalTitle" = "Map";
+
+/* Class = "UIButton"; normalTitle = "Call HELP24"; ObjectID = "twz-3k-xXe"; */
+"twz-3k-xXe.normalTitle" = "Call HELP24";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "wsn-Yw-7Gw"; */
+"wsn-Yw-7Gw.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "yq0-ne-bkB"; */
+"yq0-ne-bkB.text" = "Name:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zil-vC-84e"; */
+"zil-vC-84e.text" = "Label";

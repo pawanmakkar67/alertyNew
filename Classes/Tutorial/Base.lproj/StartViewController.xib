@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController">
+            <connections>
+                <outlet property="createAccountBlock" destination="wfM-82-IRZ" id="oz2-OK-cbc"/>
+                <outlet property="createAccountButton" destination="1e9-Ou-slk" id="Z7r-ro-g0U"/>
+                <outlet property="labelOr" destination="cWO-cf-gTP" id="ZJ9-j1-Grx"/>
+                <outlet property="signInButton" destination="Q1D-4T-oeG" id="haC-8A-aN2"/>
+                <outlet property="termsOfServiceLabel" destination="bdq-2S-pV3" id="hry-bz-yTt"/>
+                <outlet property="view" destination="ylv-YW-J50" id="flV-ec-PMd"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="ylv-YW-J50" userLabel="GetStartedView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="nXc-3V-SUv">
+                    <rect key="frame" x="87" y="60" width="201" height="63"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVh-Oi-HGK" userLabel="Sign in block">
+                    <rect key="frame" x="0.0" y="188" width="375" height="126"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVq-uL-d3h">
+                            <rect key="frame" x="20" y="20" width="335" height="22"/>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1D-4T-oeG">
+                            <rect key="frame" x="127.5" y="62" width="120" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Tdo-ab-Vua"/>
+                                <constraint firstAttribute="width" constant="120" id="uDs-AI-OaB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Sign in">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="gwR-j1-ZQU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Q1D-4T-oeG" secondAttribute="bottom" constant="20" id="5Bk-zH-RGl"/>
+                        <constraint firstItem="Q1D-4T-oeG" firstAttribute="centerX" secondItem="NVh-Oi-HGK" secondAttribute="centerX" id="9Ly-8u-QeA"/>
+                        <constraint firstAttribute="trailing" secondItem="sVq-uL-d3h" secondAttribute="trailing" constant="20" id="BEq-Ey-w8U"/>
+                        <constraint firstItem="Q1D-4T-oeG" firstAttribute="top" secondItem="sVq-uL-d3h" secondAttribute="bottom" constant="20" id="RHT-ye-Xql"/>
+                        <constraint firstItem="sVq-uL-d3h" firstAttribute="top" secondItem="NVh-Oi-HGK" secondAttribute="top" constant="20" id="hbz-BV-gmR"/>
+                        <constraint firstItem="sVq-uL-d3h" firstAttribute="leading" secondItem="NVh-Oi-HGK" secondAttribute="leading" constant="20" id="xfd-P8-8Yg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMu-jr-zbN">
+                    <rect key="frame" x="0.0" y="613.5" width="375" height="33.5"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdq-2S-pV3">
+                            <rect key="frame" x="30" y="0.0" width="315" height="33.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="By continuing, you indicate that you have read and agree to ">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="14"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="Alerty's Terms of Service">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="14"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        <integer key="NSUnderline" value="1"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="bdq-2S-pV3" firstAttribute="top" secondItem="bMu-jr-zbN" secondAttribute="top" id="4Cy-Ps-y4O"/>
+                        <constraint firstItem="bdq-2S-pV3" firstAttribute="leading" secondItem="bMu-jr-zbN" secondAttribute="leading" constant="30" id="DzT-OP-j3r"/>
+                        <constraint firstAttribute="bottom" secondItem="bdq-2S-pV3" secondAttribute="bottom" id="KpU-oJ-xgR"/>
+                        <constraint firstAttribute="trailing" secondItem="bdq-2S-pV3" secondAttribute="trailing" constant="30" id="nW0-y5-O9x"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-82-IRZ" userLabel="Create an account block">
+                    <rect key="frame" x="0.0" y="344" width="375" height="115"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWO-cf-gTP">
+                            <rect key="frame" x="20" y="0.0" width="335" height="22"/>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e9-Ou-slk">
+                            <rect key="frame" x="97.5" y="42" width="180" height="53"/>
+                            <color key="backgroundColor" red="0.15686274509803921" green="0.31764705882352939" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="53" id="CTr-Gd-5Lf"/>
+                                <constraint firstAttribute="width" constant="180" id="en5-ka-DFX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                            <state key="normal" title="Create an account">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="createAccountPressed:" destination="-1" eventType="touchUpInside" id="Psr-Zr-g3l"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cWO-cf-gTP" secondAttribute="trailing" constant="20" id="76f-QF-4Ou"/>
+                        <constraint firstItem="cWO-cf-gTP" firstAttribute="top" secondItem="wfM-82-IRZ" secondAttribute="top" id="TNM-Kf-LoV"/>
+                        <constraint firstItem="1e9-Ou-slk" firstAttribute="centerX" secondItem="wfM-82-IRZ" secondAttribute="centerX" id="TeF-kJ-1zF"/>
+                        <constraint firstItem="1e9-Ou-slk" firstAttribute="top" secondItem="cWO-cf-gTP" secondAttribute="bottom" constant="20" id="hrY-Qe-Yts"/>
+                        <constraint firstItem="cWO-cf-gTP" firstAttribute="leading" secondItem="wfM-82-IRZ" secondAttribute="leading" constant="20" id="pCB-Cf-bdn"/>
+                        <constraint firstAttribute="bottom" secondItem="1e9-Ou-slk" secondAttribute="bottom" constant="20" id="r1w-e9-R5e"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Mog-ez-mu7"/>
+            <color key="backgroundColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NVh-Oi-HGK" firstAttribute="leading" secondItem="ylv-YW-J50" secondAttribute="leading" id="MUZ-TL-exe"/>
+                <constraint firstAttribute="bottom" secondItem="bMu-jr-zbN" secondAttribute="bottom" constant="20" id="Ngm-pM-qtq"/>
+                <constraint firstAttribute="trailing" secondItem="bMu-jr-zbN" secondAttribute="trailing" id="SSM-QE-eAt"/>
+                <constraint firstItem="nXc-3V-SUv" firstAttribute="top" secondItem="Mog-ez-mu7" secondAttribute="top" constant="60" id="a8x-nG-zXv"/>
+                <constraint firstItem="nXc-3V-SUv" firstAttribute="centerX" secondItem="ylv-YW-J50" secondAttribute="centerX" id="dPM-d5-CpZ"/>
+                <constraint firstAttribute="trailing" secondItem="NVh-Oi-HGK" secondAttribute="trailing" id="gQI-v9-PDb"/>
+                <constraint firstItem="bMu-jr-zbN" firstAttribute="leading" secondItem="ylv-YW-J50" secondAttribute="leading" id="kRv-oX-WuO"/>
+                <constraint firstItem="wfM-82-IRZ" firstAttribute="leading" secondItem="ylv-YW-J50" secondAttribute="leading" id="koW-7p-JhO"/>
+                <constraint firstItem="wfM-82-IRZ" firstAttribute="top" secondItem="NVh-Oi-HGK" secondAttribute="bottom" constant="30" id="pT8-BL-2DQ"/>
+                <constraint firstAttribute="trailing" secondItem="wfM-82-IRZ" secondAttribute="trailing" id="ybg-6Z-sSQ"/>
+                <constraint firstItem="NVh-Oi-HGK" firstAttribute="top" secondItem="nXc-3V-SUv" secondAttribute="bottom" constant="65" id="zZ8-1r-Qd7"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="155"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <resources>
+        <image name="icon" width="200.5" height="62.5"/>
+    </resources>
+</document>

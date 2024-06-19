@@ -1,0 +1,13 @@
+
+
+#import <Foundation/Foundation.h>
+
+typedef void (^DarwinNotificationBlock)(NSString *identifier);
+
+@interface Darwin : NSObject
+
++ (Darwin *)sharedInstance;
+- (void)startListening:(DarwinNotificationBlock)block;
+- (void)test;
+
+@end

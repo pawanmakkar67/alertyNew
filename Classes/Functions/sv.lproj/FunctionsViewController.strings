@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; accessibilityLabel = "Follow me"; ObjectID = "GE7-TY-l5D"; */
+"GE7-TY-l5D.accessibilityLabel" = "Följ mig";
+
+/* Class = "UILabel"; text = "Follow me"; ObjectID = "Rnt-uT-m5d"; */
+"Rnt-uT-m5d.text" = "Följ mig";
+
+/* Class = "UIButton"; accessibilityLabel = "Man down"; ObjectID = "VLn-Tc-nWO"; */
+"VLn-Tc-nWO.accessibilityLabel" = "Rörelselarm";
+
+/* Class = "UILabel"; text = "Man down"; ObjectID = "ayB-XR-b7i"; */
+"ayB-XR-b7i.text" = "Rörelselarm";
+
+/* Class = "UIButton"; accessibilityLabel = "Screen lock"; ObjectID = "gal-lE-ymD"; */
+"gal-lE-ymD.accessibilityLabel" = "Skärmlås";
+
+/* Class = "UILabel"; text = "Screen lock"; ObjectID = "j9P-tU-n9H"; */
+"j9P-tU-n9H.text" = "Skärmlås";
+
+/* Class = "UIButton"; accessibilityLabel = "Timer alarm"; ObjectID = "lf0-wE-kiw"; */
+"lf0-wE-kiw.accessibilityLabel" = "Timerlarm";
+
+/* Class = "UILabel"; text = "Timer alarm"; ObjectID = "yW5-iV-qmW"; */
+"yW5-iV-qmW.text" = "Timerlarm";

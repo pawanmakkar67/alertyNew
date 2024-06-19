@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Tap and hold the screen for 3 seconds to activate an alarm."; ObjectID = "211"; */
+"211.text" = "Tap and hold the screen for 3 seconds to activate an alarm.";
+
+/* Class = "UILabel"; text = "Can not connect to server. Retrying"; ObjectID = "220"; */
+"220.text" = "Can not connect to server. Retrying";
+
+/* Class = "UIButton"; normalTitle = "is in emergency"; ObjectID = "TGB-Fh-o1G"; */
+"TGB-Fh-o1G.normalTitle" = "is in emergency";

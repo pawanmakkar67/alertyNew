@@ -1,0 +1,27 @@
+/* 
+  InfoPlist.strings
+  Alerty
+
+  Created by Gergely Meszaros-Komaromy on 12/10/16.
+
+*/
+
+"NSMicrophoneUsageDescription" = "För att kunna fånga ljud och video under ett larm.";
+
+"NSSpeechRecognitionUsageDescription" = "För att kunna aktivera larmet med tal.";
+
+"NSMotionUsageDescription" = "För att upptäcka rörelser när Man down är aktiverat.";
+
+"NSPhotoLibraryUsageDescription" = "Den senaste bilden (<60 min) bifogas till larmet som ett tillägg.";
+
+"NSBluetoothPeripheralUsageDescription" = "För att kunna ansluta till Flic, Pebble och iBeacons.";
+
+"NSCameraUsageDescription" = "För att kunna fånga ljud och video under ett larm.";
+
+"NSContactsUsageDescription" = "För att kunna välja larmmottagare.";
+
+"NSLocationWhenInUseUsageDescription" = "För att kunna visa din position under ett alarm när appen är i bakgrunden och spårningsfunktionen.";
+
+"NSLocationAlwaysUsageDescription" = "För att kunna visa din position under ett alarm när appen är i bakgrunden och spårningsfunktionen.";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "För att kunna visa din position under ett alarm när appen är i bakgrunden och spårningsfunktionen.";

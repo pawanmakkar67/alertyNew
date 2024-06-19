@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "History"; ObjectID = "Ag3-xQ-3zb"; */
+"Ag3-xQ-3zb.text" = "Historia";
+
+/* Class = "UIButton"; accessibilityLabel = "User account"; ObjectID = "Bsc-so-raB"; */
+"Bsc-so-raB.accessibilityLabel" = "Användarkonto";
+
+/* Class = "UILabel"; text = "Indoor locationing"; ObjectID = "G0h-NC-QM9"; */
+"G0h-NC-QM9.text" = "Positionering";
+
+/* Class = "UIButton"; accessibilityLabel = "Indoor locationing"; ObjectID = "MNJ-vy-5lm"; */
+"MNJ-vy-5lm.accessibilityLabel" = "Positionering";
+
+/* Class = "UILabel"; text = "User account"; ObjectID = "RxZ-vX-hvc"; */
+"RxZ-vX-hvc.text" = "Användarkonto";
+
+/* Class = "UIButton"; accessibilityLabel = "Accessories"; ObjectID = "bfc-OQ-qKJ"; */
+"bfc-OQ-qKJ.accessibilityLabel" = "Tillbehör";
+
+/* Class = "UIButton"; accessibilityLabel = "More"; ObjectID = "eHL-EI-y8f"; */
+"eHL-EI-y8f.accessibilityLabel" = "Mer";
+
+/* Class = "UILabel"; text = "More"; ObjectID = "mSn-iV-lLq"; */
+"mSn-iV-lLq.text" = "Mer";
+
+/* Class = "UIButton"; accessibilityLabel = "History"; ObjectID = "mlZ-hf-hb2"; */
+"mlZ-hf-hb2.accessibilityLabel" = "Historia";
+
+/* Class = "UILabel"; text = "Sensitivity"; ObjectID = "sCe-5n-VQS"; */
+"sCe-5n-VQS.text" = "Känslighet";
+
+/* Class = "UILabel"; text = "Accessories"; ObjectID = "xJx-kl-zxJ"; */
+"xJx-kl-zxJ.text" = "Tillbehör";
+
+/* Class = "UIButton"; accessibilityLabel = "Sensitivity"; ObjectID = "yfP-4v-wIt"; */
+"yfP-4v-wIt.accessibilityLabel" = "Känslighet";

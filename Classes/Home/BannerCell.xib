@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BannerCell" customModule="Alerty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQz-T8-p3M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIa-fq-fVS">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="44"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-awesome-clock" translatesAutoresizingMaskIntoConstraints="NO" id="5GJ-eg-ZP1">
+                                        <rect key="frame" x="10" y="9" width="26.5" height="26.5"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Follow me is active!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wNP-Xp-RTW">
+                                        <rect key="frame" x="46.5" y="11" width="157.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wNP-Xp-RTW" secondAttribute="trailing" id="3IR-Cv-Jpq"/>
+                                    <constraint firstItem="wNP-Xp-RTW" firstAttribute="leading" secondItem="5GJ-eg-ZP1" secondAttribute="trailing" constant="10" id="FZ9-fI-CE1"/>
+                                    <constraint firstItem="5GJ-eg-ZP1" firstAttribute="leading" secondItem="cIa-fq-fVS" secondAttribute="leading" constant="10" id="L2L-OD-aUp"/>
+                                    <constraint firstItem="5GJ-eg-ZP1" firstAttribute="centerY" secondItem="cIa-fq-fVS" secondAttribute="centerY" id="YWP-7H-Cue"/>
+                                    <constraint firstItem="wNP-Xp-RTW" firstAttribute="centerY" secondItem="cIa-fq-fVS" secondAttribute="centerY" id="fbA-4x-ppj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cIa-fq-fVS" secondAttribute="bottom" id="5n5-dT-bxR"/>
+                            <constraint firstItem="cIa-fq-fVS" firstAttribute="top" secondItem="NQz-T8-p3M" secondAttribute="top" id="FgG-0s-tAj"/>
+                            <constraint firstAttribute="trailing" secondItem="cIa-fq-fVS" secondAttribute="trailing" id="TSN-4z-mqd"/>
+                            <constraint firstItem="cIa-fq-fVS" firstAttribute="leading" secondItem="NQz-T8-p3M" secondAttribute="leading" id="le3-J0-AnM"/>
+                        </constraints>
+                    </scrollView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-cI-bp9">
+                        <rect key="frame" x="232.5" y="11" width="47" height="22"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r85-v9-CNB">
+                        <rect key="frame" x="279.5" y="7" width="35.5" height="30.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="5" maxY="5"/>
+                        <state key="normal" image="close_ic">
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="closePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0O9-AK-4iR"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NQz-T8-p3M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5YW-bT-mBM"/>
+                    <constraint firstItem="r85-v9-CNB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IvT-j2-f2o"/>
+                    <constraint firstItem="KYg-cI-bp9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qk5-Fr-sZJ"/>
+                    <constraint firstItem="NQz-T8-p3M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Se6-sy-doi"/>
+                    <constraint firstItem="r85-v9-CNB" firstAttribute="leading" secondItem="KYg-cI-bp9" secondAttribute="trailing" id="d5n-ty-61P"/>
+                    <constraint firstAttribute="bottom" secondItem="NQz-T8-p3M" secondAttribute="bottom" id="juu-tF-N0e"/>
+                    <constraint firstAttribute="trailing" secondItem="r85-v9-CNB" secondAttribute="trailing" constant="5" id="rHC-v4-bWO"/>
+                    <constraint firstAttribute="trailing" secondItem="NQz-T8-p3M" secondAttribute="trailing" id="yEf-j8-LOL"/>
+                    <constraint firstItem="cIa-fq-fVS" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="yG3-37-oTD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bannerIcon" destination="5GJ-eg-ZP1" id="ffv-nf-MEa"/>
+                <outlet property="bannerText" destination="wNP-Xp-RTW" id="TjE-zK-2Kr"/>
+                <outlet property="closeButton" destination="r85-v9-CNB" id="N94-Vn-EQU"/>
+                <outlet property="counterLabel" destination="KYg-cI-bp9" id="9Yo-oz-ZyY"/>
+                <outlet property="scrollView" destination="NQz-T8-p3M" id="YTF-4y-mSC"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="155"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon-awesome-clock" width="26.5" height="26.5"/>
+        <image name="close_ic" width="20.5" height="20.5"/>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "Map"; ObjectID = "050-jr-x1n"; */
+"050-jr-x1n.text" = "Karta";
+
+/* Class = "UILabel"; text = "Accuracy:"; ObjectID = "6s8-IE-XzB"; */
+"6s8-IE-XzB.text" = "Noggrannhet:";
+
+/* Class = "UILabel"; text = "View"; ObjectID = "9Jx-RR-UsW"; */
+"9Jx-RR-UsW.text" = "Visa";
+
+/* Class = "UIButton"; accessibilityLabel = "HELP24"; ObjectID = "FA9-B7-KZZ"; */
+"FA9-B7-KZZ.accessibilityLabel" = "HELP24";
+
+/* Class = "UILabel"; text = "HELP24"; ObjectID = "HPy-OU-2u3"; */
+"HPy-OU-2u3.text" = "HELP24";
+
+/* Class = "UIButton"; disabledTitle = "Accepted"; ObjectID = "PxU-SO-kdH"; */
+"PxU-SO-kdH.disabledTitle" = "Accepterad";
+
+/* Class = "UIButton"; normalTitle = "Accept alarm"; ObjectID = "PxU-SO-kdH"; */
+"PxU-SO-kdH.normalTitle" = "Acceptera larm";
+
+/* Class = "UILabel"; text = "Alarm type:"; ObjectID = "QAr-Cb-NyD"; */
+"QAr-Cb-NyD.text" = "Larmtyp:";
+
+/* Class = "UILabel"; text = "Activated:"; ObjectID = "U0Z-Ml-evV"; */
+"U0Z-Ml-evV.text" = "Aktiverad:";
+
+/* Class = "UILabel"; text = "Decline"; ObjectID = "XVh-8Q-uz1"; */
+"XVh-8Q-uz1.text" = "Avvisa";
+
+/* Class = "UILabel"; text = "Address:"; ObjectID = "agY-LO-ACr"; */
+"agY-LO-ACr.text" = "Adress:";
+
+/* Class = "UIButton"; normalTitle = "Call SOS 112"; ObjectID = "asS-tD-JmI"; */
+"asS-tD-JmI.normalTitle" = "Ring SOS 112";
+
+/* Class = "UILabel"; text = "Location:"; ObjectID = "g0V-8T-g8T"; */
+"g0V-8T-g8T.text" = "Plats:";
+
+/* Class = "UILabel"; text = "Alerty"; ObjectID = "g4A-zY-2TP"; */
+"g4A-zY-2TP.text" = "Alerty";
+
+/* Class = "UIButton"; accessibilityLabel = "Video call"; ObjectID = "jKx-cM-UWA"; */
+"jKx-cM-UWA.accessibilityLabel" = "Videosamtal";
+
+/* Class = "UILabel"; text = "Waiting for location"; ObjectID = "nqp-EL-VE9"; */
+"nqp-EL-VE9.text" = "Väntar på plats";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oQV-o5-WCM"; */
+"oQV-o5-WCM.normalTitle" = "Knapp";
+
+/* Class = "UIButton"; accessibilityLabel = "Map"; ObjectID = "r34-Rj-b7Q"; */
+"r34-Rj-b7Q.accessibilityLabel" = "Karta";
+
+/* Class = "UILabel"; text = "Video call"; ObjectID = "rvv-pC-5lW"; */
+"rvv-pC-5lW.text" = "Videosamtal";
+
+/* Class = "UIButton"; normalTitle = "Call HELP24"; ObjectID = "twz-3k-xXe"; */
+"twz-3k-xXe.normalTitle" = "Ring HELP24";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "wsn-Yw-7Gw"; */
+"wsn-Yw-7Gw.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zil-vC-84e"; */
+"zil-vC-84e.text" = "Label";
