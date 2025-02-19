@@ -74,11 +74,13 @@
 #ifdef OPUS
 #define FOLLOW_ME_INVITE_URL	@"https://opuslf.getalerty.com/followmap.php?id=%ld&lang=%@"
 #else
-#define FOLLOW_ME_INVITE_URL    @"https://alertytest.amigo.se/followmap.php?id=%ld&lang=%@"
+#define FOLLOW_ME_INVITE_URL    @"https://alerty.amigo.se/followmap.php?id=%ld&lang=%@"
 #endif
 #define START_FOLLOW_ME_URL        HOME_URL @"/ws/followme.php"
 #define START_FOLLOW_ME_URL_ORIG  HOME_URL @"/ws/startfollowme.php"
 #define STOP_FOLLOW_ME_URL		HOME_URL @"/ws/stopfollowme.php"
+#define USERDATA_URL              HOME_URL @"/ws/userdata.php"
+#define NOTIFICATION_DETAIL_URL    HOME_URL @"/ws/get_key.php"
 
 #define CONFIRMPHONE_URL		HOME_URL @"/wss/confirmphone.php"
 #define STARTDIRECTCALL_URL		HOME_URL @"/ws/startdirectcalltwilio.php"

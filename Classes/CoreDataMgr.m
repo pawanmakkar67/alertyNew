@@ -116,11 +116,13 @@
 	// get managed object context
 	NSManagedObjectContext *context = [self managedObjectContext];
 	// get entity description
-	NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
-	// create fetch request
-	NSFetchRequest *fetchRequest = [self getFetchRequestWithEntity:entity andPredicate:predicate];
-	// return result of fetch count
-	return [self executeCountRequest:fetchRequest];
+    if (entityName !=  nil) {
+        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+        // create fetch request
+        NSFetchRequest *fetchRequest = [self getFetchRequestWithEntity:entity andPredicate:predicate];
+        // return result of fetch count
+        return [self executeCountRequest:fetchRequest];
+    }
 }
 
 - (NSUInteger) countAllObjectsWithTemplate:(NSString*)templateName

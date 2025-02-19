@@ -7,7 +7,7 @@
 //
 
 #import "AlertySettingsMgr.h"
-#import "AlertyAppDelegate.h" 
+#import "AlertyAppDelegate.h"
 
 #define S_MANDOWN_SET					@"S_MANDOWN_SET"
 #define S_MANDOWN_LEVEL					@"S_MANDOWN_LEVEL"
@@ -30,6 +30,7 @@
 #define S_USER_PASSWORD					@"UserPassword"
 #define S_USER_PHONE_NR					@"UserPhoneNr"
 #define S_LALARM                         @"S_LALARM"
+#define S_NOTIFICATION_KEY              @"notificationKeyy"
 
 #define S_USER_ID						@"UserID"
 #define S_USER_SEX						@"UserSex"
@@ -66,6 +67,8 @@
 #define S_USE_PIN                       @"UsePin"
 #define S_VIDEO_ROOM_NAME               @"S_VIDEO_ROOM_NAME"
 #define S_VIDEO_TOKEN                   @"S_VIDEO_TOKEN"
+#define S_HAS_IAX                        @"UserHasIAX"
+#define S_IAX_DETAILS                    @"IAX_Details"
 
 #define kGroupsVCBubble1ShownKey				@"kGroupsVCBubble1ShownKey"
 #define kGroupsVCBubble2ShownKey				@"kGroupsVCBubble2ShownKey"
@@ -220,6 +223,52 @@
 	[[NSUserDefaults standardUserDefaults] setBool:enabled forKey:S_HAS_PLUS];
 	return [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+
++ (BOOL) hasIAX
+{
+        return [[NSUserDefaults standardUserDefaults] boolForKey:S_HAS_IAX];
+}
+
++ (BOOL) setIAX:(BOOL)enabled
+{
+    [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:S_HAS_IAX];
+    return [[NSUserDefaults standardUserDefaults] synchronize];
+}
++ (NSDictionary *) IAXDetails
+{
+    NSData *dataRepresentingSavedArray = [[NSUserDefaults standardUserDefaults] objectForKey:S_IAX_DETAILS];
+    if (dataRepresentingSavedArray != nil)
+    {
+        NSDictionary *oldSavedDICT = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        
+        return oldSavedDICT;
+    }
+    return nil;
+}
+
++ (BOOL) setIAXDetails:(NSDictionary *)profileDictionary
+{
+
+    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:profileDictionary] forKey:S_IAX_DETAILS];
+    return [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
++ (BOOL) setNotificationkey:(NSString *)val
+{
+
+    [[NSUserDefaults standardUserDefaults] setObject:val forKey:S_NOTIFICATION_KEY];
+    return [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSString*) getNotificationKey
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:S_NOTIFICATION_KEY];
+}
+
+
+
 
 // facebook
 

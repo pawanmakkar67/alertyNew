@@ -19,6 +19,7 @@
 #import "NSExtensions.h"
 #import "AlertySettingsMgr.h"
 #import "VerifyPhoneViewController.h"
+#import "StartViewController.h"
 
 #define kUserSettingsViewControllerLabelColor [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0]
 
@@ -406,7 +407,35 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
+- (IBAction)logoutAction:(UIButton *)sender {
 
+    [self resetDefaults];
+//    AlertyViewController* ilvc = [[AlertyViewController alloc] init];
+//    UINavigationController* nvc = [[UINavigationController alloc] initWithRootViewController:ilvc];
+//    nvc.navigationBarHidden = NO;
+//    nvc.navigationBar.translucent = NO;
+    [self.navigationController dismissControllerAnimated:YES completion:^{
+//        UIViewController *vc = [self.navigationController.viewControllers objectAtIndex:0];
+        StartViewController *svc = [[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:svc];
+        navController.navigationBarHidden = YES;
+        navController.navigationBar.opaque = YES;
+        navController.navigationBar.translucent = NO;
+        navController.modalPresentationStyle = UIModalPresentationFullScreen;
+        
+        [[AlertyAppDelegate sharedAppDelegate].window setRootViewController:navController];
+
+
+    }];
+}
+- (void)resetDefaults {
+    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = [defs dictionaryRepresentation];
+    for (id key in dict) {
+        [defs removeObjectForKey:key];
+    }
+    [defs synchronize];
+}
 #pragma mark - TextField Delegates
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

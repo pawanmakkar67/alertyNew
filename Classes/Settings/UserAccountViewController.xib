@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
                     <color key="backgroundColor" name="color_background"/>
                     <color key="separatorColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
@@ -27,22 +27,42 @@
                         <outlet property="delegate" destination="-1" id="11"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT2-Pr-83s">
+                    <rect key="frame" x="40" y="385" width="240" height="45"/>
+                    <color key="backgroundColor" red="0.9143763950892857" green="0.06946247246938779" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="qNk-Qm-XJ3"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Logout">
+                        <color key="titleColor" name="color_text"/>
+                    </state>
+                    <connections>
+                        <action selector="logoutAction:" destination="-1" eventType="touchUpInside" id="q42-Ii-aFw"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" name="color_background"/>
             <constraints>
                 <constraint firstItem="5" firstAttribute="top" secondItem="4" secondAttribute="top" id="3Hd-qz-EzE"/>
                 <constraint firstItem="5" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="9MM-Wp-GLK"/>
                 <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" id="LJO-s4-9Vb"/>
-                <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" id="jCg-1Z-S05"/>
+                <constraint firstAttribute="bottom" secondItem="MT2-Pr-83s" secondAttribute="bottom" constant="50" id="ckL-eP-1HR"/>
+                <constraint firstAttribute="trailing" secondItem="MT2-Pr-83s" secondAttribute="trailing" constant="40" id="fJM-zZ-13v"/>
+                <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" constant="100" id="jCg-1Z-S05"/>
+                <constraint firstItem="MT2-Pr-83s" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="40" id="jvx-Vp-f8C"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="134" y="155"/>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
         </view>
     </objects>
     <resources>
         <namedColor name="color_background">
+            <color red="0.039000000804662704" green="0.039000000804662704" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_text">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

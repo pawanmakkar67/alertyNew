@@ -135,7 +135,7 @@ import Proximiio
                         
                         if self.first {
                             self.first = false
-                            self.mapView?.setCenter(location, zoomLevel: 17, direction: 0, animated: false)
+                            self.mapView?.setCenter(location, zoomLevel: 14, direction: 0, animated: false)
                         }
                     }
                 }

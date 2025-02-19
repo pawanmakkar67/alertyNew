@@ -19,6 +19,8 @@
 
 + (NSURLSessionTask *)post:(NSString*)url body:(NSDictionary*)body completion:(void (^)(NSDictionary* result, NSString *errorMessage))completion;
 
++ (NSURLSessionTask *)GET:(NSString*)url body:(NSDictionary*)body completion:(void (^)(NSDictionary* result, NSString *errorMessage))completion;
+
 + (NSURLSessionTask *)postForString:(NSString*)url body:(NSDictionary*)body completion:(void (^)(NSString* result, NSString *errorMessage))completion;
 
 @end

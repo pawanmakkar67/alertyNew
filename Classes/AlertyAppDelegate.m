@@ -29,19 +29,21 @@
 #import "TRZDarwinNotificationCenter.h"
 #import "LAlarmTimerVC.h"
 #import "LAlarmOnOffVC.h"
+
 @import Firebase;
 @import Proximiio;
 @import UserNotifications;
+@import AVFoundation;
 
 NSString* const ALERTINFOCALL_URL = HOME_URL @"/ws/alertinfo.php";
-NSString * const DarwinNotificationName = @"com.apple.springboard.lockcomplete";
+//ContextManager* contextM;
 
 @interface AlertyAppDelegate() <MFMailComposeViewControllerDelegate, ProximiioDelegate, UNUserNotificationCenterDelegate, FLICManagerDelegate> {
 	NSURLConnection	*_tokenRequest;
 	GeoAddress *_getGeoCode;
 	BOOL incomingCall;
     BOOL alarmRejected;
-
+    
 	UIBackgroundTaskIdentifier reconnectTask;
     TRZDarwinNotificationCenter *notificationHandle;
 }
@@ -79,7 +81,7 @@ NSString * const DarwinNotificationName = @"com.apple.springboard.lockcomplete";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// "business" or "personal" version
 	//[AlertySettingsMgr setBusinessVersion:YES];
-
+    _contextM = [ContextManager new];
     [FIRApp configure];
 
     //[DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
@@ -108,6 +110,32 @@ NSString * const DarwinNotificationName = @"com.apple.springboard.lockcomplete";
 	// set our audio session to ambient
     //[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
 
+    
+    @try {
+        NSError *error = nil;
+        
+        // Set the audio session category with options
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+                                               mode:AVAudioSessionModeDefault
+                                            options:(AVAudioSessionCategoryOptionMixWithOthers | AVAudioSessionCategoryOptionAllowAirPlay)
+                                              error:&error];
+        if (error) {
+            NSLog(@"Error setting category: %@", error.localizedDescription);
+        } else {
+            NSLog(@"Playback OK");
+        }
+
+        // Activate the audio session
+        [[AVAudioSession sharedInstance] setActive:YES error:&error];
+        if (error) {
+            NSLog(@"Error activating session: %@", error.localizedDescription);
+        } else {
+            NSLog(@"Session is Active");
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"Exception: %@", exception.reason);
+    }
+    
     application.applicationIconBadgeNumber = 0;
     
     self.alertManager = [[AlertManager alloc] init];
@@ -126,77 +154,75 @@ NSString * const DarwinNotificationName = @"com.apple.springboard.lockcomplete";
         _locationManager.allowsBackgroundLocationUpdates = YES;
         _locationManagerTracking.allowsBackgroundLocationUpdates = YES;
     }*/
-    
-//    let cfstr13 = "com.apple.springboard.lockcomplete" as CFString
-
-//    CFNotificationCenterRef const center = CFNotificationCenterGetDarwinNotifyCenter();
-//     CFDictionaryRef const userInfo = NULL;
-//     BOOL const deliverImmediately = YES;
-//     CFStringRef str = (__bridge CFStringRef)@"com.apple.springboard.lockcomplete";
-//     CFNotificationCenterPostNotification(center, str, NULL, userInfo, deliverImmediately);
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMessageNotification:) name:(__bridge NSNotificationName _Nullable)(str) object:nil];
-    CFNotificationCenterRef const center = CFNotificationCenterGetDarwinNotifyCenter();
-    CFStringRef str = (__bridge CFStringRef)@"com.apple.springboard.lockcomplete";
-    CFNotificationCenterAddObserver(center, (__bridge const void *)(self), notificationCallback, str, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
-
-    self->notificationHandle = [[TRZDarwinNotificationCenter defaultCenter] addObserverForName:@"com.apple.springboard.lockcomplete" queue:nil usingBlock:^(NSNotification* notification) {
-        if([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground)
-        {
-            
-            NSDate *thisMagicMoment = [NSDate date];
-            NSDate *lastMagicMoment =  (NSDate *)[[NSUserDefaults standardUserDefaults] objectForKey:@"lastMagicMoment"];
-
-            if (lastMagicMoment==nil)
+    if (([AlertySettingsMgr getNotificationKey] == NULL) || ([[AlertySettingsMgr getNotificationKey]  isEqual: @""])) {
+        
+    }
+    else {
+        NSString* keyN  = [AlertySettingsMgr getNotificationKey];
+        CFNotificationCenterRef const center = CFNotificationCenterGetDarwinNotifyCenter();
+        CFStringRef str = (__bridge CFStringRef)keyN;
+        CFNotificationCenterAddObserver(center, (__bridge const void *)(self), notificationCallback, str, NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+        
+        self->notificationHandle = [[TRZDarwinNotificationCenter defaultCenter] addObserverForName:keyN queue:nil usingBlock:^(NSNotification* notification) {
+            if([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground)
             {
-                NSLog (@"First launch!");
-            }
-            else
-            {
-                NSTimeInterval timeOfNoMagic = [thisMagicMoment timeIntervalSinceDate:lastMagicMoment];
-                NSLog (@"Application was in background for %.1f seconds", timeOfNoMagic);
-                if ([AlertySettingsMgr userID] != 0) {
-                    
-                    //do your stuff - treat NSTimeInterval as double
-                    if (AlertySettingsMgr.lAlarmEnabled) {
-                        if (timeOfNoMagic < 4.0)
-                        {
-                            UNMutableNotificationContent *localNotification = [UNMutableNotificationContent new];
-                            localNotification.title = [NSString localizedUserNotificationStringForKey:@"Alerty - LARM!!" arguments:nil];
-                            localNotification.body = [NSString localizedUserNotificationStringForKey:@"PÅGÅENDE LARM - Aktiveras om 20 sekunder!." arguments:nil];
-                            localNotification.sound = [UNNotificationSound defaultSound];
-                            UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+                
+                NSDate *thisMagicMoment = [NSDate date];
+                NSDate *lastMagicMoment =  (NSDate *)[[NSUserDefaults standardUserDefaults] objectForKey:@"lastMagicMoment"];
+                
+                if (lastMagicMoment==nil)
+                {
+                    NSLog (@"First launch!");
+                }
+                else
+                {
+                    NSTimeInterval timeOfNoMagic = [thisMagicMoment timeIntervalSinceDate:lastMagicMoment];
+                    NSLog (@"Application was in background for %.1f seconds", timeOfNoMagic);
+                    if ([AlertySettingsMgr userID] != 0) {
+                        
+                        //do your stuff - treat NSTimeInterval as double
+                        if (AlertySettingsMgr.lAlarmEnabled) {
                             
-                            localNotification.badge = @([[UIApplication sharedApplication] applicationIconBadgeNumber] +1);
-                            
-                            UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"App Active" content:localNotification trigger:trigger];
-                            
-                            UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-                            [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-                                NSLog(@"Notification created");
-                            }];
-                            
-                            self->alarmRejected = YES;
-                            double delayInSeconds = 20; // set the time
-                            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-                            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                                if (self->alarmRejected == YES) {
-                                    NSString* userId = [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]];
-                                    if (![userId  isEqual: @""]) {
-                                        self->alarmRejected = NO;
-                                        [[AlertyAppDelegate sharedAppDelegate].mainController.alertyViewController startSosMode:[NSNumber numberWithInt:ALERT_SOURCE_BUTTON] lock:nil];
-                                    }
+                            if ([self.topController isKindOfClass:[LAlarmOnOffVC class]] ) {
+                                if (timeOfNoMagic < 4.0) {
+                                    UNMutableNotificationContent *localNotification = [UNMutableNotificationContent new];
+                                    localNotification.title = [NSString localizedUserNotificationStringForKey:@"Alerty - LARM!!" arguments:nil];
+                                    localNotification.body = [NSString localizedUserNotificationStringForKey:@"PÅGÅENDE LARM - Aktiveras om 20 sekunder!." arguments:nil];
+                                    localNotification.sound = [UNNotificationSound defaultSound];
+                                    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+                                    
+                                    localNotification.badge = @([[UIApplication sharedApplication] applicationIconBadgeNumber] +1);
+                                    
+                                    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"App Active" content:localNotification trigger:trigger];
+                                    
+                                    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+                                    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                                        NSLog(@"Notification created");
+                                    }];
+                                    
+                                    self->alarmRejected = YES;
+                                    double delayInSeconds = 20; // set the time
+                                    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+                                    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                                        if (self->alarmRejected == YES) {
+                                            NSString* userId = [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]];
+                                            if (![userId  isEqual: @""]) {
+                                                self->alarmRejected = NO;
+                                                [[AlertyAppDelegate sharedAppDelegate].mainController.alertyViewController startSosMode:[NSNumber numberWithInt:ALERT_SOURCE_BUTTON] lock:nil];
+                                            }
+                                        }
+                                    });
                                 }
-                            });
+                            }
                         }
                     }
                 }
+                
             }
-            
+            //do something here
+        }];
+        
     }
-        //do something here
-    }];
-    
-    
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
 	// start man down manager
@@ -242,16 +268,30 @@ NSString * const DarwinNotificationName = @"com.apple.springboard.lockcomplete";
 	return YES;
 }
 
+void notificationCallback(CFNotificationCenterRef center, void * observer, CFStringRef name, void const * object, CFDictionaryRef userInfo)
+{
+    if (([AlertySettingsMgr getNotificationKey] == NULL) || ([[AlertySettingsMgr getNotificationKey]  isEqual: @""])) {
+        
+    }
+    else {
+        NSString* keyN  = [AlertySettingsMgr getNotificationKey];
+        
+        NSString *identifier = (__bridge NSString *)name;
+        [[NSNotificationCenter defaultCenter] postNotificationName:keyN object:nil userInfo:@{@"identifier" : identifier}];
+    }
+}
+
+- (BOOL)didUserPressLockButton {
+    CGFloat oldBrightness = [UIScreen mainScreen].brightness;
+    [UIScreen mainScreen].brightness = oldBrightness + (oldBrightness <= 0.01 ? 0.01 : -0.01);
+    return oldBrightness != [UIScreen mainScreen].brightness;
+}
+
+
 //- (void)startListening:(DarwinNotificationBlock)block
 //{
 //    self.listenBlock = block;
 //}
-
-void notificationCallback(CFNotificationCenterRef center, void * observer, CFStringRef name, void const * object, CFDictionaryRef userInfo)
-{
-    NSString *identifier = (__bridge NSString *)name;
-    [[NSNotificationCenter defaultCenter] postNotificationName:DarwinNotificationName object:nil userInfo:@{@"identifier" : identifier}];
-}
 
 
 - (void)didReceiveMessageNotification:(NSNotification *)notification
@@ -433,6 +473,11 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+    if ([ self didUserPressLockButton]) {
+        printf("lock button  pressed didUserPressLockButton");
+    }
+    
     //[self.manDownMgr stopManDown];
     [Proximiio.sharedInstance extendBackgroundTime];
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
@@ -707,6 +752,8 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    
+    [_contextM stopContext];
 	//[self stopAllLocation];
     [self startSignificantLocationService];
     
@@ -1248,6 +1295,7 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
         for(id key in manager.knownButtons)
         {
             SCLFlicButton *button = manager.knownButtons[key];
+            
             //[button setMode:SCLFlicButtonModeForeground];
             button.delegate = self;
             [button connect];
@@ -1257,6 +1305,8 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
     //[app endBackgroundTask:self.flicInitTask];
 #endif
 }
+
+
 
 - (void) flicButton:(SCLFlicButton *) button didReceiveButtonHold:(BOOL) queued age: (NSInteger) age {
 }
@@ -1648,6 +1698,24 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
     }];
 }
 
+- (UIViewController *)topController{
+return [self topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
+- (UIViewController *)topViewController:(UIViewController *)rootViewController
+{
+if (rootViewController.presentedViewController == nil) {
+return rootViewController;
+  }
+if ([rootViewController.presentedViewController isMemberOfClass:[UINavigationController class]]) {
+    UINavigationController *navigationController = (UINavigationController *)rootViewController.presentedViewController;
+    UIViewController *lastViewController = [[navigationController viewControllers] lastObject];
+return [self topViewController:lastViewController];
+  }
+  UIViewController *presentedViewController = (UIViewController *)rootViewController.presentedViewController;
+return [self topViewController:presentedViewController];
+}
+
+
 @end
 
 
@@ -1664,3 +1732,6 @@ typedef void (^DarwinNotificationBlock)(NSString *identifier);
 - (void)test;
 
 @end
+
+
+

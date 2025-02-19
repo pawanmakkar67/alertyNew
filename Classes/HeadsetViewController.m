@@ -120,7 +120,7 @@
         for(id key in [SCLFlicManager sharedManager].knownButtons)
         {
             SCLFlicButton *button = [SCLFlicManager sharedManager].knownButtons[key];
-            //[button setMode:SCLFlicButtonModeForeground];
+//            [button setMode:SCLFlicButtonModeForeground];
             button.delegate = self;
             [button connect];
         }

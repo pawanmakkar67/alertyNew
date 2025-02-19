@@ -31,6 +31,10 @@ typedef enum {
 + (BOOL) setFollowMe:(BOOL)enabled;
 + (BOOL) hasPlus;
 + (BOOL) setPlus:(BOOL)enabled;
++ (BOOL) hasIAX;
++ (BOOL) setIAX:(BOOL)enabled;
++ (BOOL) setIAXDetails:(NSDictionary *)profileDictionary;
++ (NSDictionary*) IAXDetails;
 + (BOOL) hasFacebook;
 + (BOOL) hasIndoorLocationing;
 + (BOOL) setIndoorLocationing:(BOOL)enabled;
@@ -57,6 +61,8 @@ typedef enum {
 
 + (NSString*) userName;
 + (BOOL) setUserName:(NSString*)name;
++ (NSString*) getNotificationKey;
++ (BOOL) setNotificationkey:(NSString*)val;
 + (NSString*) userEmail;
 + (BOOL) setUserEmail:(NSString*)email;
 + (NSString*) userPassword;

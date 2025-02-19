@@ -14,6 +14,7 @@
 #import "StartViewController.h"
 #import "TutorialViewController.h"
 #import "IndoorLocationingViewController.h"
+#import "ZopierCallVW.h"
 #import "MobileInterface.h"
 #import <Alerty-Swift.h>
 @import UserNotifications;
@@ -144,7 +145,13 @@
     [self updateManDown];
     [self updateTimer];
     [self updateHomeTimer];
-
+    if ([AlertySettingsMgr userID] != 0) {
+        
+        [self getUserDetail];
+        if (([AlertySettingsMgr getNotificationKey] == NULL) || ([[AlertySettingsMgr getNotificationKey]  isEqual: @""])) {
+            [self getNotificationDetail];
+        }
+    }
     /*if ([AlertySettingsMgr userID] != 0) {
         if (![AlertySettingsMgr tutorialShown]) {
             [AlertySettingsMgr setTutorialShown:YES];
@@ -333,145 +340,162 @@
 
 - (void) startSosMode:(NSNumber*)source lock:(BOOL)lock
 {
-	if (![AlertyViewController canSendAlert]) return;
-	
-    [self updateTimer];
     
-    if (![AlertySettingsMgr discreteModeEnabled]) AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-	
-	self.redButton.userInteractionEnabled = NO;
-	
-	if ([DataManager sharedDataManager].followMe) {
-		[self cancelAlertMode];
-		[DataManager sharedDataManager].followMe = NO;
-        NSDictionary* params = @{ @"userid": [NSNumber numberWithInteger:AlertySettingsMgr.userID], @"lang": NSLocalizedString(@"LANGUAGE", @"")};
-        [MobileInterface postForString:STOP_FOLLOW_ME_URL body:params completion:^(NSString *result, NSString *errorMessage) {
-        }];
-	}
-	
-	if (![AlertySettingsMgr isBusinessVersion]) {
-		NSArray *friends = [[AlertyDBMgr sharedAlertyDBMgr] getAllContacts];
-		
-		if ([friends count] == 0) {
-			[AlertyAppDelegate showLocalNotification:NSLocalizedString(@"There was no friend to send alert to, the alert was stopped.", @"") action:NSLocalizedString(@"OK", @"OK") userInfo:nil];
-			self.redButton.userInteractionEnabled = YES;
-			return;
-		}
-	}
-	
-	[DataManager sharedDataManager].underSosMode = YES;
+    BOOL hasIAX = [AlertySettingsMgr hasIAX];
+    if (hasIAX) {
+        NSDictionary *dict = [AlertySettingsMgr IAXDetails];
+        NSString* apiUsername = [dict valueForKey:@"iax_anvandarnamn"];
 
-	// hide lockview on main controller if one showing
-	[[AlertyAppDelegate sharedAppDelegate].mainController showLockView:NO activeText:nil];
-	
-	[DataManager sharedDataManager].sos = YES;
-    [DataManager sharedDataManager].voice = nil;
-    [DataManager sharedDataManager].voicePhone = nil;
+        [[AlertyAppDelegate sharedAppDelegate].contextM makeCallToCallee:apiUsername];
 
-	self.lockView = [LockView lockView];
-    self.lockView.accessibilityViewIsModal = YES;
-	_lockView.delegate = self;
-	_lockView.frame = [AlertyAppDelegate sharedAppDelegate].mainController.view.frame;
-	_lockView.viewToast.alpha = 0.0;
-    _lockView.backgroundColor = [UIColor blackColor];
-	if (lock || [AlertySettingsMgr discreteModeEnabled]) {
-        //Add red point
-        UIView *redDot = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 5, 5)];
-        redDot.backgroundColor = [UIColor redColor];
-        [_lockView addSubview: redDot];
-		_lockView.activeView.hidden = YES;
-        _lockView.bgView.hidden = YES;
-	}
-	[[AlertyAppDelegate sharedAppDelegate].mainController.view addSubview:self.lockView];
+        ZopierCallVW* vc = [[ZopierCallVW alloc] initWithNibName:@"ZopierCallVW" bundle:nil];
+        vc->currentNo = apiUsername;
+        vc.modalPresentationStyle =UIModalPresentationFullScreen;
+        [[AlertyAppDelegate sharedAppDelegate].mainController presentViewController:vc animated:YES completion:nil];
 
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
-    
-	[self.lockView startAnimation];
-	
-	[[AlertyAppDelegate sharedAppDelegate] startUpdatingLocation];
-	
-	[DataManager sharedDataManager].alertId = [AlertySettingsMgr sosMode];
-	[DataManager sharedDataManager].newRoute = YES;
-	[UIApplication sharedApplication].idleTimerDisabled = YES;
-	NSLog(@"START SOS --------------------");
-	[[DataManager sharedDataManager] startSynchronization];
-	if ([DataManager sharedDataManager].alertId <= 0) {
-        [[DataManager sharedDataManager] sendPhoneNumbers:[source intValue]];
-	}
-	
-	/*if([AlertySettingsMgr hasFacebook])
-	{
-		CLLocationCoordinate2D _coord = [[DataManager sharedDataManager] currentLocation];
-		NSString *lat = [[NSString stringWithFormat:@"%f", _coord.latitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
-		NSString *lng = [[NSString stringWithFormat:@"%f", _coord.longitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
-		NSString *lang = [AlertyAppDelegate language];
-		NSString *homeUrl = [lang isEqualToString:@"sv"] ? HOME_URL_SE : HOME_URL;
-		NSString *imageUrl = [NSString stringWithFormat:STAT_MAP_URL, lat, lng];
-		NSString *linkUrl = [NSString stringWithFormat:@"%@/map.php?id=%i", homeUrl, [AlertySettingsMgr userID]];
-		NSString *message = NSLocalizedString(@"<name> is in an emergency situation. Click on the link to see where I am.", @"");
-		message = [message stringByReplacingOccurrencesOfString:@"<name>" withString:[[DataManager sharedDataManager] userName]];
-		[[FacebookMgr sharedFacebookMgr] sendStatusUpdate:message imageUrl:imageUrl linkUrl:linkUrl];
-	}*/
-    
-    //NSString *phone = @"tel://0036703890849";
-    //BOOL success = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
-	
-	BOOL network = [ReachabilityManager checkNetwork];
-	if (!network && ![DataManager sharedDataManager].followMe) {
-		if ([MFMessageComposeViewController canSendText]) {
-
-			NSString *userName = nil;
-			if ([AlertySettingsMgr isBusinessVersion]) {
-				userName = [AlertySettingsMgr userNameServer];
-			}
-			else {
-				userName = [AlertySettingsMgr userFullName];
-			}
-			
-			CLLocationCoordinate2D lastLoc = [[DataManager sharedDataManager] currentLocation];
-			/*NSString *lat = [[NSString stringWithFormat:@"%f", _coord.latitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
-			NSString *lng = [[NSString stringWithFormat:@"%f", _coord.longitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
-			NSString *lang = [AlertyAppDelegate language];
-			NSString *homeUrl = [lang isEqualToString:@"sv"] ? HOME_URL_SE : HOME_URL;
-			NSString *imageUrl = [NSString stringWithFormat:STAT_MAP_URL, lat, lng];
-			NSString *linkUrl = [NSString stringWithFormat:@"%@/map.php?id=%i", homeUrl, [AlertySettingsMgr userID]];*/
-			NSString *message = NSLocalizedString(@"<name> is in an emergency situation. Click on the link to see where I am. <URL>", @"");
-			
-			NSString* latitude = [NSString stringWithFormat:@"%.6f", lastLoc.latitude];
-			latitude = [latitude stringByReplacingOccurrencesOfString:@"," withString:@"."];
-			NSString* longitude = [NSString stringWithFormat:@"%.6f", lastLoc.longitude];
-			longitude = [longitude stringByReplacingOccurrencesOfString:@"," withString:@"."];
-			NSString* url = [NSString stringWithFormat:@"getalerty.com/map.php?lat=%@&lng=%@&l=%@", latitude, longitude, [AlertyAppDelegate language]];
-			message = [message stringByReplacingOccurrencesOfString:@"<URL>" withString:url];
-			message = [message stringByReplacingOccurrencesOfString:@"<name>" withString:userName];
-			message = [message stringByReplacingOccurrencesOfString:@"<latitude>" withString:latitude];
-			message = [message stringByReplacingOccurrencesOfString:@"<longitude>" withString:longitude];
-
-			if( !self.sosComposeViewController ) {
-				self.sosComposeViewController = [[MFMessageComposeViewController alloc] init];
-			}
-			
-			self.sosComposeViewController.messageComposeDelegate = self;
-			[self.sosComposeViewController setBody:message];
-			
-			NSMutableArray* recipients = [NSMutableArray arrayWithCapacity:2];
-			NSArray* friends = [DataManager sharedDataManager].friendsToNotify;
-			for (int i=0; i<friends.count; i++) {
-				Contact* c = [friends objectAtIndex:i];
-				[recipients addObject:c.phone];
-			}
-			if ([AlertySettingsMgr isBusinessVersion]) {
-				[recipients addObject:@"+46769438688"];
-			}
-			[self.sosComposeViewController setRecipients:recipients];
-			
-			if( self.sosComposeViewController ) {
-				[self presentController:self.sosComposeViewController animated:YES completion:nil];
-			}
-		} else {
-            [self startFollowMeMode:nil recipient:nil];
-		}
-	}
+        
+    }
+    else {
+        if (![AlertyViewController canSendAlert]) return;
+        
+        [self updateTimer];
+        
+        if (![AlertySettingsMgr discreteModeEnabled]) AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
+        self.redButton.userInteractionEnabled = NO;
+        
+        if ([DataManager sharedDataManager].followMe) {
+            [self cancelAlertMode];
+            [DataManager sharedDataManager].followMe = NO;
+            NSDictionary* params = @{ @"userid": [NSNumber numberWithInteger:AlertySettingsMgr.userID], @"lang": NSLocalizedString(@"LANGUAGE", @"")};
+            [MobileInterface postForString:STOP_FOLLOW_ME_URL body:params completion:^(NSString *result, NSString *errorMessage) {
+            }];
+        }
+        
+        if (![AlertySettingsMgr isBusinessVersion]) {
+            NSArray *friends = [[AlertyDBMgr sharedAlertyDBMgr] getAllContacts];
+            
+            if ([friends count] == 0) {
+                [AlertyAppDelegate showLocalNotification:NSLocalizedString(@"There was no friend to send alert to, the alert was stopped.", @"") action:NSLocalizedString(@"OK", @"OK") userInfo:nil];
+                self.redButton.userInteractionEnabled = YES;
+                return;
+            }
+        }
+        
+        [DataManager sharedDataManager].underSosMode = YES;
+        
+        // hide lockview on main controller if one showing
+        [[AlertyAppDelegate sharedAppDelegate].mainController showLockView:NO activeText:nil];
+        
+        [DataManager sharedDataManager].sos = YES;
+        [DataManager sharedDataManager].voice = @"1";
+        [DataManager sharedDataManager].voicePhone = @"1";
+        
+        self.lockView = [LockView lockView];
+        self.lockView.accessibilityViewIsModal = YES;
+        _lockView.delegate = self;
+        _lockView.frame = [AlertyAppDelegate sharedAppDelegate].mainController.view.frame;
+        _lockView.viewToast.alpha = 0.0;
+        _lockView.backgroundColor = [UIColor blackColor];
+        if (lock || [AlertySettingsMgr discreteModeEnabled]) {
+            //Add red point
+            UIView *redDot = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 5, 5)];
+            redDot.backgroundColor = [UIColor redColor];
+            [_lockView addSubview: redDot];
+            _lockView.activeView.hidden = YES;
+            _lockView.bgView.hidden = YES;
+        }
+        [[AlertyAppDelegate sharedAppDelegate].mainController.view addSubview:self.lockView];
+        
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
+        
+        [self.lockView startAnimation];
+        
+        [[AlertyAppDelegate sharedAppDelegate] startUpdatingLocation];
+        
+        [DataManager sharedDataManager].alertId = [AlertySettingsMgr sosMode];
+        [DataManager sharedDataManager].newRoute = YES;
+        [UIApplication sharedApplication].idleTimerDisabled = YES;
+        NSLog(@"START SOS --------------------");
+        [[DataManager sharedDataManager] startSynchronization];
+        if ([DataManager sharedDataManager].alertId <= 0) {
+            [[DataManager sharedDataManager] sendPhoneNumbers:[source intValue]];
+        }
+        
+        /*if([AlertySettingsMgr hasFacebook])
+         {
+         CLLocationCoordinate2D _coord = [[DataManager sharedDataManager] currentLocation];
+         NSString *lat = [[NSString stringWithFormat:@"%f", _coord.latitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
+         NSString *lng = [[NSString stringWithFormat:@"%f", _coord.longitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
+         NSString *lang = [AlertyAppDelegate language];
+         NSString *homeUrl = [lang isEqualToString:@"sv"] ? HOME_URL_SE : HOME_URL;
+         NSString *imageUrl = [NSString stringWithFormat:STAT_MAP_URL, lat, lng];
+         NSString *linkUrl = [NSString stringWithFormat:@"%@/map.php?id=%i", homeUrl, [AlertySettingsMgr userID]];
+         NSString *message = NSLocalizedString(@"<name> is in an emergency situation. Click on the link to see where I am.", @"");
+         message = [message stringByReplacingOccurrencesOfString:@"<name>" withString:[[DataManager sharedDataManager] userName]];
+         [[FacebookMgr sharedFacebookMgr] sendStatusUpdate:message imageUrl:imageUrl linkUrl:linkUrl];
+         }*/
+        
+        //NSString *phone = @"tel://0036703890849";
+        //BOOL success = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+        
+        BOOL network = [ReachabilityManager checkNetwork];
+        if (!network && ![DataManager sharedDataManager].followMe) {
+            if ([MFMessageComposeViewController canSendText]) {
+                
+                NSString *userName = nil;
+                if ([AlertySettingsMgr isBusinessVersion]) {
+                    userName = [AlertySettingsMgr userNameServer];
+                }
+                else {
+                    userName = [AlertySettingsMgr userFullName];
+                }
+                
+                CLLocationCoordinate2D lastLoc = [[DataManager sharedDataManager] currentLocation];
+                /*NSString *lat = [[NSString stringWithFormat:@"%f", _coord.latitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
+                 NSString *lng = [[NSString stringWithFormat:@"%f", _coord.longitude] stringByReplacingOccurrencesOfString:@"," withString:@"."];
+                 NSString *lang = [AlertyAppDelegate language];
+                 NSString *homeUrl = [lang isEqualToString:@"sv"] ? HOME_URL_SE : HOME_URL;
+                 NSString *imageUrl = [NSString stringWithFormat:STAT_MAP_URL, lat, lng];
+                 NSString *linkUrl = [NSString stringWithFormat:@"%@/map.php?id=%i", homeUrl, [AlertySettingsMgr userID]];*/
+                NSString *message = NSLocalizedString(@"<name> is in an emergency situation. Click on the link to see where I am. <URL>", @"");
+                
+                NSString* latitude = [NSString stringWithFormat:@"%.6f", lastLoc.latitude];
+                latitude = [latitude stringByReplacingOccurrencesOfString:@"," withString:@"."];
+                NSString* longitude = [NSString stringWithFormat:@"%.6f", lastLoc.longitude];
+                longitude = [longitude stringByReplacingOccurrencesOfString:@"," withString:@"."];
+                NSString* url = [NSString stringWithFormat:@"getalerty.com/map.php?lat=%@&lng=%@&l=%@", latitude, longitude, [AlertyAppDelegate language]];
+                message = [message stringByReplacingOccurrencesOfString:@"<URL>" withString:url];
+                message = [message stringByReplacingOccurrencesOfString:@"<name>" withString:userName];
+                message = [message stringByReplacingOccurrencesOfString:@"<latitude>" withString:latitude];
+                message = [message stringByReplacingOccurrencesOfString:@"<longitude>" withString:longitude];
+                
+                if( !self.sosComposeViewController ) {
+                    self.sosComposeViewController = [[MFMessageComposeViewController alloc] init];
+                }
+                
+                self.sosComposeViewController.messageComposeDelegate = self;
+                [self.sosComposeViewController setBody:message];
+                
+                NSMutableArray* recipients = [NSMutableArray arrayWithCapacity:2];
+                NSArray* friends = [DataManager sharedDataManager].friendsToNotify;
+                for (int i=0; i<friends.count; i++) {
+                    Contact* c = [friends objectAtIndex:i];
+                    [recipients addObject:c.phone];
+                }
+                if ([AlertySettingsMgr isBusinessVersion]) {
+                    [recipients addObject:@"+46769438688"];
+                }
+                [self.sosComposeViewController setRecipients:recipients];
+                
+                if( self.sosComposeViewController ) {
+                    [self presentController:self.sosComposeViewController animated:YES completion:nil];
+                }
+            } else {
+                [self startFollowMeMode:nil recipient:nil];
+            }
+        }
+    }
 }
 
 #pragma mark - Public methods
@@ -790,6 +814,79 @@
     NSDictionary* params = @{ @"userid": [NSNumber numberWithInteger:AlertySettingsMgr.userID], @"lang": NSLocalizedString(@"LANGUAGE", @"")};
     [MobileInterface postForString:STOP_FOLLOW_ME_URL body:params completion:^(NSString *result, NSString *errorMessage) {
     }];
+}
+
+- (void) getNotificationDetail {
+    NSDictionary* params = @{ @"id": [NSNumber numberWithInteger:AlertySettingsMgr.userID]};
+    [MobileInterface post:NOTIFICATION_DETAIL_URL body:params completion:^(NSDictionary *result, NSString *errorMessage) {
+
+        if (result) {
+            NSString* notification_key = [result objectForKey:@"notification_key"];
+            NSString* app_version = [result objectForKey:@"app_version"];
+            NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+
+            if (([app_version compare:version options:NSNumericSearch] == NSOrderedDescending) || ([app_version compare:version options:NSNumericSearch] == NSOrderedSame)) {
+              // actualVersion is lower than or equal the requiredVersion
+                [AlertySettingsMgr setNotificationkey:notification_key];
+            }
+            
+//            if ([iax_anvand  isEqual: @"yes"]) {
+//                [AlertySettingsMgr setIAX:YES];
+//                [AlertySettingsMgr setIAXDetails:result];
+//                [self activateAccount];
+//            }
+//            else {
+//                [AlertySettingsMgr setIAX:NO];
+//            }
+        }
+    }];
+}
+
+- (void) getUserDetail {
+    NSDictionary* params = @{ @"id": [NSNumber numberWithInteger:AlertySettingsMgr.userID]};
+    [MobileInterface post:USERDATA_URL body:params completion:^(NSDictionary *result, NSString *errorMessage) {
+
+        if (result) {
+            NSString* iax_anvand = [result objectForKey:@"iax_anvand"];
+            if ([iax_anvand  isEqual: @"yes"]) {
+                [AlertySettingsMgr setIAX:YES];
+                [AlertySettingsMgr setIAXDetails:result];
+                [self activateAccount];
+            }
+            else {
+                [AlertySettingsMgr setIAX:NO];
+            }
+        }
+    }];
+}
+
+-(void) activateAccount {
+    BOOL hasIAX = [AlertySettingsMgr hasIAX];
+    if (hasIAX) {
+        
+        NSString* accountUsername = @"info@amigo.se";
+        NSString*  accountActivationPassword = @"X4RA47RKA-JMNK";
+        
+        [[AlertyAppDelegate sharedAppDelegate].contextM activateZDK:@"ZDK for iOS 2.0" withUserName:accountUsername andPassword:accountActivationPassword];
+
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self callIAXRegister];
+        });
+
+    }
+    
+}
+- (void) callIAXRegister {
+
+    NSDictionary *dict = [AlertySettingsMgr IAXDetails];
+    NSString* accountDomain = @"alertypbx.amigoalarm.net:54569";
+
+    NSString* apiUsername = [dict valueForKey:@"iax_anvandarnamn"];
+    NSString* apiPassword = [dict valueForKey:@"iax_losenord"]; // username from api iax_losenord
+
+    [[AlertyAppDelegate sharedAppDelegate].contextM registerAccountWithDomain:accountDomain username:apiUsername andPassword:apiPassword];
+
 }
 
 - (void) didCancelLockView {

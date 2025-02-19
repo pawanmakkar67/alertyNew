@@ -137,7 +137,7 @@ return [UIColor colorWithRed:59.0f/255.0f green:178.0f/255.0f blue:208.0f/255.0f
     self.mapView.showsUserLocation = NO;
     
     CLLocationCoordinate2D startLoc = CLLocationCoordinate2DMake(self.startLatitude.doubleValue, self.startLongitude.doubleValue);
-    [self.mapView setCenterCoordinate:startLoc zoomLevel:18.0 animated:YES];
+    [self.mapView setCenterCoordinate:startLoc zoomLevel:14.0 animated:YES];
 
     if (self.bounds) {
         [self setMapBounds];
@@ -201,8 +201,8 @@ return [UIColor colorWithRed:59.0f/255.0f green:178.0f/255.0f blue:208.0f/255.0f
             
                 MGLCoordinateBounds bounds = MGLCoordinateBoundsMake(CLLocationCoordinate2DMake(bottom, left), CLLocationCoordinate2DMake(top, right));
                 [self.mapView setVisibleCoordinateBounds:bounds animated:NO];
-                if (self.mapView.zoomLevel > 19.0) {
-                    self.mapView.zoomLevel = 19.0;
+                if (self.mapView.zoomLevel > 14.0) {
+                    self.mapView.zoomLevel = 14.0;
                 }
                 
                 //MapImage* mapImage = [[MapImage alloc] initWithProximiioFloor:floor];
@@ -292,8 +292,8 @@ return [UIColor colorWithRed:59.0f/255.0f green:178.0f/255.0f blue:208.0f/255.0f
     
     MGLCoordinateBounds bounds = MGLCoordinateBoundsMake(southWestPoint, northEastPoint);
     [self.mapView setVisibleCoordinateBounds:bounds animated:NO];
-    if (self.mapView.zoomLevel > 18.0) {
-        self.mapView.zoomLevel = 18.0;
+    if (self.mapView.zoomLevel > 14.0) {
+        self.mapView.zoomLevel = 14.0;
     }
 }
 

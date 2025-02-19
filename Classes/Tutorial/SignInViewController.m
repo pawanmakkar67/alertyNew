@@ -214,6 +214,7 @@
     [AlertySettingsMgr setLastUserID:self.idField.text];
     [AlertySettingsMgr setLastAuthCode:self.pinField.text];
 	[[DataManager sharedDataManager] registerNewBizUser:self.idField.text pincode:self.pinField.text];
+
 }
 
 - (void) login:(NSString*)userEmail pass:(NSString*)userPass {

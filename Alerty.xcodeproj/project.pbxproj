@@ -533,18 +533,28 @@
 		84FC0A54190658B000FD54AE /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC0A53190658B000FD54AE /* libicucore.dylib */; };
 		84FD57111C7DC1E50046157E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD57101C7DC1E50046157E /* VideoToolbox.framework */; };
 		84FD57151C7DC21C0046157E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FD57141C7DC21C0046157E /* CoreTelephony.framework */; };
+		8713ED3D2C6099910055CFAB /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8713ED3C2C6099910055CFAB /* ContextManager.swift */; };
+		8713ED3E2C609C060055CFAB /* zdk.objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B29F782C5E453300175EE9 /* zdk.objc.framework */; };
+		8713ED3F2C609C070055CFAB /* zdk.objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B29F782C5E453300175EE9 /* zdk.objc.framework */; };
+		8713ED402C609C070055CFAB /* zdk.objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B29F782C5E453300175EE9 /* zdk.objc.framework */; };
+		8713ED442C609D720055CFAB /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8713ED432C609D710055CFAB /* AppLogger.swift */; };
 		875282472B8B05F50017E3C8 /* LAlarmOnOffVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 875282412B8B05F40017E3C8 /* LAlarmOnOffVC.m */; };
 		875282482B8B05F50017E3C8 /* LAlarmOnOffVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 875282422B8B05F40017E3C8 /* LAlarmOnOffVC.xib */; };
 		875282492B8B05F50017E3C8 /* LAlarmConfirmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 875282442B8B05F50017E3C8 /* LAlarmConfirmVC.m */; };
 		8752824A2B8B05F50017E3C8 /* LAlarmConfirmVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 875282452B8B05F50017E3C8 /* LAlarmConfirmVC.xib */; };
 		8752824F2B8B520D0017E3C8 /* LAlarmTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8752824C2B8B520D0017E3C8 /* LAlarmTimerVC.m */; };
 		875282502B8B520D0017E3C8 /* LAlarmTimerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8752824D2B8B520D0017E3C8 /* LAlarmTimerVC.xib */; };
+		8761132A2C6289AD00433EC6 /* ZopierCallVW.m in Sources */ = {isa = PBXBuildFile; fileRef = 876113272C6289AD00433EC6 /* ZopierCallVW.m */; };
+		8761132B2C6289AD00433EC6 /* ZopierCallVW.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876113282C6289AD00433EC6 /* ZopierCallVW.xib */; };
+		8761132C2C633E7400433EC6 /* zdk.objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B29F782C5E453300175EE9 /* zdk.objc.framework */; };
+		8761132D2C633E7400433EC6 /* zdk.objc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B29F782C5E453300175EE9 /* zdk.objc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8774CD9029D92DB000298AB2 /* flic2lib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4740C7624AA50360047D78D /* flic2lib.xcframework */; };
 		8774CD9129D92DB000298AB2 /* flic2lib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4740C7624AA50360047D78D /* flic2lib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8774CD9329D92DB300298AB2 /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4118E822165074E0090D6A1 /* fliclib.framework */; };
 		8774CD9429D92DB300298AB2 /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4118E822165074E0090D6A1 /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87923A1D2AB6EF8400FC8D05 /* Darwin in Resources */ = {isa = PBXBuildFile; fileRef = 87923A1C2AB6EF8300FC8D05 /* Darwin */; };
 		87923A212AB6F71E00FC8D05 /* TRZDarwinNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87923A1F2AB6F71E00FC8D05 /* TRZDarwinNotificationCenter.m */; };
+		87B46B992CEF4C7600609019 /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD41F01DD70499006D8ECF /* CallKit.framework */; };
 		87CE5A932AC3332700EF1EFC /* addAlarmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CE5A912AC3332600EF1EFC /* addAlarmVC.m */; };
 		87CE5A942AC3332700EF1EFC /* addAlarmVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87CE5A922AC3332600EF1EFC /* addAlarmVC.xib */; };
 		BA8D52DA3512A0F816D1C97F /* Pods_Sakerhetsappen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0041B8DFA1E1874AF925FF6E /* Pods_Sakerhetsappen.framework */; };
@@ -2424,6 +2434,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8774CD9429D92DB300298AB2 /* fliclib.framework in Embed Frameworks */,
+				8761132D2C633E7400433EC6 /* zdk.objc.framework in Embed Frameworks */,
 				8774CD9129D92DB000298AB2 /* flic2lib.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -3249,6 +3260,8 @@
 		84FD57101C7DC1E50046157E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		84FD57121C7DC2120046157E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		84FD57141C7DC21C0046157E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8713ED3C2C6099910055CFAB /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
+		8713ED432C609D710055CFAB /* AppLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
 		875282402B8B05F40017E3C8 /* LAlarmOnOffVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAlarmOnOffVC.h; sourceTree = "<group>"; };
 		875282412B8B05F40017E3C8 /* LAlarmOnOffVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAlarmOnOffVC.m; sourceTree = "<group>"; };
 		875282422B8B05F40017E3C8 /* LAlarmOnOffVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAlarmOnOffVC.xib; sourceTree = "<group>"; };
@@ -3258,10 +3271,14 @@
 		8752824C2B8B520D0017E3C8 /* LAlarmTimerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAlarmTimerVC.m; sourceTree = "<group>"; };
 		8752824D2B8B520D0017E3C8 /* LAlarmTimerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LAlarmTimerVC.xib; sourceTree = "<group>"; };
 		8752824E2B8B520D0017E3C8 /* LAlarmTimerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAlarmTimerVC.h; sourceTree = "<group>"; };
+		876113262C6289AD00433EC6 /* ZopierCallVW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZopierCallVW.h; sourceTree = "<group>"; };
+		876113272C6289AD00433EC6 /* ZopierCallVW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZopierCallVW.m; sourceTree = "<group>"; };
+		876113282C6289AD00433EC6 /* ZopierCallVW.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZopierCallVW.xib; sourceTree = "<group>"; };
 		87923A1C2AB6EF8300FC8D05 /* Darwin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Darwin; sourceTree = "<group>"; };
 		87923A1F2AB6F71E00FC8D05 /* TRZDarwinNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZDarwinNotificationCenter.m; sourceTree = "<group>"; };
 		87923A202AB6F71E00FC8D05 /* TRZDarwinNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZDarwinNotificationCenter.h; sourceTree = "<group>"; };
 		87A3AD222BCE38E000398D87 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		87B29F782C5E453300175EE9 /* zdk.objc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = zdk.objc.framework; sourceTree = "<group>"; };
 		87CE5A902AC3332600EF1EFC /* addAlarmVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addAlarmVC.h; sourceTree = "<group>"; };
 		87CE5A912AC3332600EF1EFC /* addAlarmVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addAlarmVC.m; sourceTree = "<group>"; };
 		87CE5A922AC3332600EF1EFC /* addAlarmVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addAlarmVC.xib; sourceTree = "<group>"; };
@@ -3499,6 +3516,7 @@
 				84FB4B5818C616D200A85F3F /* libsqlite3.dylib in Frameworks */,
 				84FB4B5618C616B400A85F3F /* CoreVideo.framework in Frameworks */,
 				4B0903C216E618060060B72B /* CoreText.framework in Frameworks */,
+				87B46B992CEF4C7600609019 /* CallKit.framework in Frameworks */,
 				54EC1BC11609F1F500A8D6DE /* CoreData.framework in Frameworks */,
 				54BD301F14C8014800AD773A /* MessageUI.framework in Frameworks */,
 				54BD302014C8014800AD773A /* Security.framework in Frameworks */,
@@ -3513,6 +3531,7 @@
 				54BD302714C8014800AD773A /* ImageIO.framework in Frameworks */,
 				8413FD8419D59C4A008C7BE0 /* libLibrary.a in Frameworks */,
 				54BD302814C8014800AD773A /* AddressBook.framework in Frameworks */,
+				8761132C2C633E7400433EC6 /* zdk.objc.framework in Frameworks */,
 				54BD302914C8014800AD773A /* AddressBookUI.framework in Frameworks */,
 				54BD302A14C8014800AD773A /* AVFoundation.framework in Frameworks */,
 				54BD302B14C8014800AD773A /* AudioToolbox.framework in Frameworks */,
@@ -3543,6 +3562,7 @@
 				E46ABBC81F47593E00C2CDE7 /* libicucore.dylib in Frameworks */,
 				E46ABBC91F47593E00C2CDE7 /* libresolv.dylib in Frameworks */,
 				E46ABBCA1F47593E00C2CDE7 /* libsqlite3.dylib in Frameworks */,
+				8713ED402C609C070055CFAB /* zdk.objc.framework in Frameworks */,
 				E46ABBCB1F47593E00C2CDE7 /* CoreVideo.framework in Frameworks */,
 				E46ABBCC1F47593E00C2CDE7 /* OpenGLES.framework in Frameworks */,
 				E46ABBCE1F47593E00C2CDE7 /* CoreText.framework in Frameworks */,
@@ -3589,6 +3609,7 @@
 				E4EB27EE1EF93DCE00DC37D2 /* libicucore.dylib in Frameworks */,
 				E4EB27EF1EF93DCE00DC37D2 /* libresolv.dylib in Frameworks */,
 				E4EB27F01EF93DCE00DC37D2 /* libsqlite3.dylib in Frameworks */,
+				8713ED3F2C609C070055CFAB /* zdk.objc.framework in Frameworks */,
 				E4EB27F11EF93DCE00DC37D2 /* CoreVideo.framework in Frameworks */,
 				E4EB27F21EF93DCE00DC37D2 /* OpenGLES.framework in Frameworks */,
 				E4EB27F41EF93DCE00DC37D2 /* CoreText.framework in Frameworks */,
@@ -3635,6 +3656,7 @@
 				E4EBB2171E9CA56B0006B411 /* PushKit.framework in Frameworks */,
 				E4EBB2181E9CA56B0006B411 /* libicucore.dylib in Frameworks */,
 				E4EBB2191E9CA56B0006B411 /* libresolv.dylib in Frameworks */,
+				8713ED3E2C609C060055CFAB /* zdk.objc.framework in Frameworks */,
 				E4EBB21A1E9CA56B0006B411 /* libsqlite3.dylib in Frameworks */,
 				E4EBB21B1E9CA56B0006B411 /* CoreVideo.framework in Frameworks */,
 				E4EBB21C1E9CA56B0006B411 /* OpenGLES.framework in Frameworks */,
@@ -3672,6 +3694,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				876113292C6289AD00433EC6 /* ZopierCallVW */,
+				8713ED3B2C6099720055CFAB /* IAX Zopier Call */,
 				8752824B2B8B520D0017E3C8 /* LAlarmTimerVC */,
 				875282432B8B05F50017E3C8 /* LAlarmConfirmVC */,
 				8752823F2B8B05F40017E3C8 /* LAlarmOnOffVC */,
@@ -3719,6 +3743,7 @@
 			isa = PBXGroup;
 			children = (
 				87A3AD222BCE38E000398D87 /* PrivacyInfo.xcprivacy */,
+				87B29F782C5E453300175EE9 /* zdk.objc.framework */,
 				E47CA925211C7644004905AA /* Chat */,
 				E4CBBEC420F3C8C500F5D4EB /* Twilio */,
 				E46ABBFE1F476A3100C2CDE7 /* LaunchScreenSakerhetsappen.storyboard */,
@@ -5449,6 +5474,15 @@
 			name = Motion;
 			sourceTree = "<group>";
 		};
+		8713ED3B2C6099720055CFAB /* IAX Zopier Call */ = {
+			isa = PBXGroup;
+			children = (
+				8713ED432C609D710055CFAB /* AppLogger.swift */,
+				8713ED3C2C6099910055CFAB /* ContextManager.swift */,
+			);
+			path = "IAX Zopier Call";
+			sourceTree = "<group>";
+		};
 		8752823F2B8B05F40017E3C8 /* LAlarmOnOffVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -5477,6 +5511,16 @@
 				8752824E2B8B520D0017E3C8 /* LAlarmTimerVC.h */,
 			);
 			path = LAlarmTimerVC;
+			sourceTree = "<group>";
+		};
+		876113292C6289AD00433EC6 /* ZopierCallVW */ = {
+			isa = PBXGroup;
+			children = (
+				876113262C6289AD00433EC6 /* ZopierCallVW.h */,
+				876113272C6289AD00433EC6 /* ZopierCallVW.m */,
+				876113282C6289AD00433EC6 /* ZopierCallVW.xib */,
+			);
+			path = ZopierCallVW;
 			sourceTree = "<group>";
 		};
 		8783AEA82ABEB8B200964BC8 /* addAlarmVC */ = {
@@ -6030,6 +6074,7 @@
 				8413FEC819D59C4B008C7BE0 /* PopupMenu.xib in Resources */,
 				8413FE9619D59C4B008C7BE0 /* ListFlowViewController.xib in Resources */,
 				8413FEA319D59C4B008C7BE0 /* default_bg_gray.png in Resources */,
+				8761132B2C6289AD00433EC6 /* ZopierCallVW.xib in Resources */,
 				8413FE9D19D59C4B008C7BE0 /* ListGridViewController.xib in Resources */,
 				8413FEAA19D59C4B008C7BE0 /* vu_bg_horiz.png in Resources */,
 				8413FEC219D59C4B008C7BE0 /* picker_small_frame.png in Resources */,
@@ -7824,6 +7869,7 @@
 				"${BUILT_PRODUCTS_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseDynamicLinks/FirebaseDynamicLinks.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseRemoteConfigInterop/FirebaseRemoteConfigInterop.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseSessions/FirebaseSessions.framework",
 				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
@@ -7852,6 +7898,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCrashlytics.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDynamicLinks.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseRemoteConfigInterop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseSessions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
@@ -7890,6 +7937,7 @@
 				"${BUILT_PRODUCTS_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseDynamicLinks/FirebaseDynamicLinks.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseRemoteConfigInterop/FirebaseRemoteConfigInterop.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseSessions/FirebaseSessions.framework",
 				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
@@ -7918,6 +7966,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCrashlytics.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDynamicLinks.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseRemoteConfigInterop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseSessions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
@@ -7957,6 +8006,7 @@
 				"${BUILT_PRODUCTS_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseDynamicLinks/FirebaseDynamicLinks.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseRemoteConfigInterop/FirebaseRemoteConfigInterop.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseSessions/FirebaseSessions.framework",
 				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
@@ -7971,6 +8021,7 @@
 				"${BUILT_PRODUCTS_DIR}/Switches/Switches.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Proximiio/Proximiio.framework/Proximiio",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TwilioAudioProcessors/TwilioAudioProcessors.framework/TwilioAudioProcessors",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TwilioVideo/TwilioVideo.framework/TwilioVideo",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TwilioVoice/TwilioVoice.framework/TwilioVoice",
 			);
@@ -7987,6 +8038,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCrashlytics.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDynamicLinks.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseRemoteConfigInterop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseSessions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
@@ -8001,6 +8053,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Switches.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Proximiio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioAudioProcessors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVideo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwilioVoice.framework",
 			);
@@ -8087,6 +8140,7 @@
 				54BD2FF514C8014800AD773A /* SynchronizeService.m in Sources */,
 				84CD4E111DA4CE6B007FD9A9 /* MapImageOverlay.m in Sources */,
 				54BD2FF614C8014800AD773A /* MyLocation.m in Sources */,
+				8713ED442C609D720055CFAB /* AppLogger.swift in Sources */,
 				E4EA4DBE1E8583BC00450520 /* PermissionsViewController.m in Sources */,
 				E43A571622202CC000331C3A /* MobileInterface.m in Sources */,
 				E4C2A8BE26DD2CFA00A21E68 /* CallKitHelper.swift in Sources */,
@@ -8103,6 +8157,7 @@
 				54BD301214C8014800AD773A /* VideoListViewController.m in Sources */,
 				54BD301314C8014800AD773A /* VideoDetailsViewController.m in Sources */,
 				54BD301414C8014800AD773A /* VideoCell.m in Sources */,
+				8761132A2C6289AD00433EC6 /* ZopierCallVW.m in Sources */,
 				875282492B8B05F50017E3C8 /* LAlarmConfirmVC.m in Sources */,
 				54BD301514C8014800AD773A /* MapViewController.m in Sources */,
 				54BD301614C8014800AD773A /* RouteAnnotation.m in Sources */,
@@ -8151,6 +8206,7 @@
 				E4E6BA7E212BF9280056678B /* MessageTimeCell.m in Sources */,
 				54648641160A15E900530297 /* AlertyDBMgr.m in Sources */,
 				5423D3DA160B043F0007384B /* Alerty.xcdatamodel in Sources */,
+				8713ED3D2C6099910055CFAB /* ContextManager.swift in Sources */,
 				E4A24F351E8C322300E0D1A6 /* AudioPlayback2.m in Sources */,
 				84A7A5ED1D28051000172F77 /* HeadsetTableViewCell.m in Sources */,
 				5423D3DE160B04670007384B /* Contact.m in Sources */,
@@ -8754,7 +8810,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = "$(inherited)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -8763,7 +8819,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 32;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 65PLBWH443;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -8783,7 +8840,7 @@
 					"ALERTY=1",
 				);
 				INFOPLIST_FILE = "Alerty-Business-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_MAP_FILE_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8795,7 +8852,7 @@
 					"$(PROJECT_DIR)/include/libraries/Debug",
 					"$(PROJECT_DIR)/include/libraries/Release",
 				);
-				MARKETING_VERSION = 6.1.3;
+				MARKETING_VERSION = 6.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -8833,6 +8890,10 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/pawan/Downloads/getalerty-alerty-ios-871a667ecea7/Classes/Alerty-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -8849,7 +8910,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = "$(inherited)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -8858,7 +8919,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 32;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 65PLBWH443;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
@@ -8875,7 +8937,7 @@
 					"ALERTY=1",
 				);
 				INFOPLIST_FILE = "Alerty-Business-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_MAP_FILE_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8887,7 +8949,7 @@
 					"$(PROJECT_DIR)/include/libraries/Debug",
 					"$(PROJECT_DIR)/include/libraries/Release",
 				);
-				MARKETING_VERSION = 6.1.3;
+				MARKETING_VERSION = 6.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -8925,6 +8987,10 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/pawan/Downloads/getalerty-alerty-ios-871a667ecea7/Classes/Alerty-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

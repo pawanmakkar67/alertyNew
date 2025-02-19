@@ -42,12 +42,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [_togg]
-//    if (AlertySettingsMgr.lAlarmEnabled) {
+    if (AlertySettingsMgr.lAlarmEnabled) {
         [_toggleBtn setImage: [UIImage imageNamed:@"btnActive"] forState:UIControlStateNormal];
-//    }
-//    else {
-//        [_toggleBtn setImage: [UIImage imageNamed:@"btnInactive"] forState:UIControlStateNormal];
-//    }
+    }
+    else {
+        [_toggleBtn setImage: [UIImage imageNamed:@"btnInactive"] forState:UIControlStateNormal];
+    }
     CGFloat width = [UIScreen mainScreen].bounds.size.width/2;
     [_circleVW.layer setCornerRadius:(width-50)];
 

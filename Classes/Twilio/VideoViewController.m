@@ -346,7 +346,7 @@
     self.incomingCallView.hidden = YES;
     self.statusSubtitle.text = @"";
     self.statusTitle.text = @"";
-    
+    [self prepareLocalMedia];
     [self.converstationController.view removeFromSuperview];
     self.converstationController = [[ConverstationController alloc] initWithNibName:@"ConverstationController" bundle:nil];
     self.converstationController.localDataTrack = self.localDataTrack;
@@ -470,6 +470,7 @@
     
     [self logMessage:[NSString stringWithFormat:@"Subscribed to %@ audio track for Participant %@",
                       publication.trackName, participant.identity]];
+    
 }
 
 - (void)didUnsubscribeFromAudioTrack:(TVIRemoteAudioTrack *)audioTrack publication:(TVIRemoteAudioTrackPublication *)publication forParticipant:(TVIRemoteParticipant *)participant {

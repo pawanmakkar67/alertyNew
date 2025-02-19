@@ -137,7 +137,7 @@
     self.locationTextField.text = self.wifiAp.name;
     //self.wifiApDescTextField.text = self.wifiAp.name;
     self.navigationItem.rightBarButtonItem.enabled = (self.wifiAp.name.length > 0);
-    [self.mapView setCenterCoordinate:[DataManager sharedDataManager].chosenLocation zoomLevel:19.0 animated:YES];
+    [self.mapView setCenterCoordinate:[DataManager sharedDataManager].chosenLocation zoomLevel:14.0 animated:YES];
     
 	//[self.bssidLabel setText:self.wifiAp.bssid];
     self.bssidTextField.text = self.wifiAp.bssid;
@@ -308,7 +308,7 @@
             self.view.opaque = YES;
             self.view.userInteractionEnabled = YES;
             [self.activityIndicatorView stopAnimating];
-            [self.mapView setCenterCoordinate:[DataManager sharedDataManager].chosenLocation zoomLevel:19.0 animated:YES];
+            [self.mapView setCenterCoordinate:[DataManager sharedDataManager].chosenLocation zoomLevel:14.0 animated:YES];
             
             self.geoAddress = [[GeoAddress alloc] init];
             self.geoAddress.delegate = self.addressTextField;
@@ -339,7 +339,7 @@
 }
 
 - (IBAction)myPositionPressed:(id)sender {
-    [self.mapView setCenterCoordinate:[DataManager sharedDataManager].chosenLocation zoomLevel:19.0 animated:YES];
+    [self.mapView setCenterCoordinate:[DataManager sharedDataManager].chosenLocation zoomLevel:14.0 animated:YES];
 }
 
 #pragma mark - MGLMapViewDelegate

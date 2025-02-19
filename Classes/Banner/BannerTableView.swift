@@ -143,6 +143,14 @@ class BannerTableView: UITableView {
 //        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 //        AlertyAppDelegate.shared()?.mainController?.addTimer(nil)
     }
+    @objc func closeAlert() {
+//        AlertySettingsMgr.sethomeTimer(nil)
+        updateHomeTimer()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+//        AlertyAppDelegate.shared()?.mainController?.addTimer(nil)
+    }
+
 }
 
 extension BannerTableView: UITableViewDataSource, UITableViewDelegate {
@@ -184,6 +192,9 @@ extension BannerTableView: BannerCellDelegate {
         } 
         if type == .HomeAlarm {
             closeHomeTimer()
+        }
+        if type == .Alert {
+//            closeHomeTimer()
         }
         else if type == .Mandown {
             AlertyAppDelegate.shared()?.stopManDown()

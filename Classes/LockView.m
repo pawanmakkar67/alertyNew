@@ -206,7 +206,7 @@ static NSString *const kTwimlParamFrom = @"from";
     
     // Connect to the Room using the options we provided.
     self.room = [TwilioVideoSDK connectWithOptions:connectOptions delegate:self];
- 
+
     audioDevice.block =  ^ {
         // We will execute `kDefaultAVAudioSessionConfigurationBlock` first.
         kTVODefaultAVAudioSessionConfigurationBlock();

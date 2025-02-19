@@ -258,7 +258,12 @@
     NSString* userId = [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]];
     if (![userId  isEqual: @""]) {
         NSString* key = @"userid";
-        post = [post stringByAppendingFormat:@"%@=%@", key, userId];
+        if ([post isEqual:@""]) {
+            post = [post stringByAppendingFormat:@"%@=%@", key, userId];
+        }
+        else {
+            post = [post stringByAppendingFormat:@"&%@=%@", key, userId];
+        }
     }
 
     NSData* postData = [post dataUsingEncoding:NSUTF8StringEncoding];
@@ -269,7 +274,91 @@
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        printf(@"%@",response);
+
+        if (error != nil) {
+            if (completion != nil) {
+                completion(nil, error.localizedDescription);
+            }
+            return;
+        }
         
+        if ([response isKindOfClass:NSHTTPURLResponse.class]) {
+            NSInteger statusCode = ((NSHTTPURLResponse *)response).statusCode;
+            if (statusCode != 200) {
+                if (data != nil && data.length > 0) {
+                    NSError *jsonError = nil;
+                    NSDictionary *json = [NSJSONSerialization
+                                          JSONObjectWithData:data
+                                          options:kNilOptions
+                                          error:&jsonError];
+                    if (jsonError == nil) {
+                        if (completion != nil) {
+                            completion(nil, json[@"message"]);
+                        }
+                        return;
+                    }
+                }
+            } else {
+                if (data != nil && data.length > 0) {
+                    NSError *jsonError = nil;
+                    NSDictionary *json = [NSJSONSerialization
+                                          JSONObjectWithData:data
+                                          options:kNilOptions
+                                          error:&jsonError];
+                    if (jsonError == nil) {
+                        if (completion != nil) {
+                            completion(json, nil);
+                        }
+                        return;
+                    }
+                }
+            }
+        }
+        
+        if (completion != nil) {
+            completion(nil, nil);
+        }
+    }];
+    [dataTask resume];
+    return dataTask;
+}
+
++ (NSURLSessionTask *)GET:(NSString*)url body:(NSDictionary*)body completion:(void (^)(NSDictionary* result, NSString *errorMessage))completion {
+    
+    
+    NSString* post = @"";
+    for (NSString* key in body.allKeys) {
+        NSString* value = [body[key] stringValue];
+        value = [value stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+        if (post.length) post = [post stringByAppendingString:@"&"];
+        post = [post stringByAppendingFormat:@"%@=%@", key, value];
+    }
+    NSString* userId = [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]];
+    if (![userId  isEqual: @""]) {
+        NSString* key = @"userid";
+        if ([post isEqual:@""]) {
+            post = [post stringByAppendingFormat:@"%@=%@", key, userId];
+        }
+        else {
+            post = [post stringByAppendingFormat:@"&%@=%@", key, userId];
+        }
+    }
+    url = [url stringByAppendingFormat:@"?%@", post];
+
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+
+//    NSData* postData = [post dataUsingEncoding:NSUTF8StringEncoding];
+//    NSString *postLength = [NSString stringWithFormat:@"%ld", postData.length];
+    [request setHTTPMethod:@"GET"];
+//    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+//    [request setHTTPBody:postData];
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        printf(@"%@",response);
+
         if (error != nil) {
             if (completion != nil) {
                 completion(nil, error.localizedDescription);
@@ -339,7 +428,7 @@
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        
+        printf(@"%@",response);
         if (error != nil) {
             if (completion != nil) {
                 completion(nil, error.localizedDescription);

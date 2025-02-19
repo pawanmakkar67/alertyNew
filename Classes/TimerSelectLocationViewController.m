@@ -70,7 +70,7 @@
     NSNumber* latitude = AlertySettingsMgr.timerLatitude;
     NSNumber* longitude = AlertySettingsMgr.timerLongitude;
     if (latitude && longitude) {
-        [self.mapView setCenterCoordinate:CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue) zoomLevel:19.0 animated:YES];
+        [self.mapView setCenterCoordinate:CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue) zoomLevel:14.0 animated:YES];
     }
     
     [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {

@@ -178,8 +178,8 @@
             
                 MGLCoordinateBounds bounds = MGLCoordinateBoundsMake(CLLocationCoordinate2DMake(bottom, left), CLLocationCoordinate2DMake(top, right));
                 [self.mapView setVisibleCoordinateBounds:bounds animated:NO];
-                if (self.mapView.zoomLevel > 19.0) {
-                    self.mapView.zoomLevel = 19.0;
+                if (self.mapView.zoomLevel > 14.0) {
+                    self.mapView.zoomLevel = 14.0;
                 }
                 break;
             }
@@ -198,7 +198,7 @@
     NSArray* availableInputs = [[AVAudioSession sharedInstance] availableInputs];
     AVAudioSessionPortDescription* port = [availableInputs objectAtIndex:0];
     [[AVAudioSession sharedInstance] setPreferredInput:port error:&error];
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
     [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker
                                                        error:&error];
     [[AVAudioSession sharedInstance] setActive:YES error:&error];
@@ -229,6 +229,9 @@
     
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
+}
+
+-(void) connectCall  {
     if (self.token.length == 0) {
         NSDictionary* parameters = @{ @"alertId" : [NSNumber numberWithInteger:self.alertID], @"userId" : [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]], @"userid" : [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]] };
         [MobileInterface post:ALERTTOKENCALL_URL body:parameters completion:^(NSDictionary *result, NSString *errorMessage) {
@@ -240,6 +243,7 @@
     } else {
         [self doConnect];
     }
+
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
@@ -265,6 +269,8 @@
 
                 NSDictionary* alertInfo = result[@"alertinfo"];
                 NSLog(@"alert INFO ==> %@",alertInfo);
+                NSLog(@"alert INFO Api response ==> %@",result);
+
                 NSString* addr = nil;
                 id address = [alertInfo objectForKey:@"address"];
                 if (address && [address isKindOfClass:[NSString class]]) addr = address;
@@ -385,7 +391,7 @@
                     }
                     
                     if (first) {
-                        [self.mapView setCenterCoordinate:self.annotation.coordinate zoomLevel:19.0 animated:YES];
+                        [self.mapView setCenterCoordinate:self.annotation.coordinate zoomLevel:14.0 animated:YES];
                     }
                 }
             }];
@@ -580,6 +586,7 @@
     NSDictionary* parameters = @{ @"id": [NSNumber numberWithInteger:self.alertID], @"name": userName, @"userid" : [NSString stringWithFormat:@"%ld", (long)[AlertySettingsMgr userID]] };
     [MobileInterface post:ACCEPTCALL_URL body: parameters completion:^(NSDictionary *result, NSString *errorMessage) {
         [self refresh];
+        [self connectCall];
     }];
 }
 
