@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E0E6E2107CBA2A1AC984916840166E5FA400C8B6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "bc4f4a4d-4d15-0410-a335-b34da10b6112++4980" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E0E6E2107CBA2A1AC984916840166E5FA400C8B6" : 9223372036854775807,
+    "bc4f4a4d-4d15-0410-a335-b34da10b6112++4980" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4183FF94-37EF-46F5-9804-D311BD246972",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E0E6E2107CBA2A1AC984916840166E5FA400C8B6" : "InnovationPush\/",
+    "bc4f4a4d-4d15-0410-a335-b34da10b6112++4980" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Alerty",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/Alerty.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/vedefors\/alerty.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E0E6E2107CBA2A1AC984916840166E5FA400C8B6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/svn.viking.tm\/projects",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "bc4f4a4d-4d15-0410-a335-b34da10b6112++4980"
+    }
+  ]
+}
